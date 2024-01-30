@@ -1,46 +1,61 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: var(--text-color);
+  font-family: "montserrat", sans-serif;
+}
+
 /*header style*/
-header {
+h1 {
   text-align: center; 
   padding: 20px;
+  color: white;
+  font-size: 50;
 }
 /*navigation bar style*/
-nav {
+h2 {
   text-align: center;
-  word-spacing: 30px;
+  word-spacing: 20;
   padding: 10px;
-  background-color: #f5f5dc;
-  font-family: Helvetica;
-  
+  color: White;
+  font-family: Helvetica; 
 }
-/*navigation bar button style*/
-nav a {
-  color: #000000;
-  text-decoration: none;
-  font-size: larger;
-}
-/*creating the two-column layout*/
-*{
-  box-sizing: border-box;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-.post-text-box {
-  flex: 70%;
-  padding: 20px;
-}
-.profile {
-  flex: 70%;
-  padding: 20px;
-}
-/*profile image and heading style*/
-.profile img {
-  width: 120px;
-  display: block;
-  margin-left: 0;
-  margin-right: 0;
-}
-.profile h1 {
+
+h3 {
   text-align: center;
+  word-spacing: 20;
+  padding: 10px;
+  color: White;
+  font-family: Helvetica; 
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.row {
+  padding-left: 25%;
+  padding-right: 25%;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.link {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 2rem;
+  color: White;
+  text-decoration: none;
+  transition: 0.25s;
 }
