@@ -8,6 +8,7 @@
     border-radius: 2px;
     cursor: pointer;
     margin-right: 8px;
+    transition: opacity 0.15s;
   }
 
   .subscribe:hover {
@@ -29,6 +30,7 @@
     width: 60px;
     margin-right: 8px;
     cursor: pointer;
+    transition: color 0.25s, background-color 0.15s;
   }
 
   .join:hover {
@@ -50,17 +52,32 @@
     cursor: pointer;
     font-weight: bold;
     font-size: 15px;
+    transition: box-shadow 0.25s;
   }
+
+  .tweet:hover {
+    box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .button-link {
+    text-decoration: none;
+  }
+
 </style>
 
-<button class="subscribe">
-  SUBSCRIBE
-</button>
+<a href="https://youtube.com" target="_blank" class="button-link">
+  <button class="subscribe">
+    SUBSCRIBE
+  </button>
+</a>
+<a href="https://facebook.com" target="_blank" class="button-link">
+  <button class="join">
+    JOIN
+  </button>
+</a>
 
-<button class="join">
-  JOIN
-</button>
-
-<button class="Tweet">
-  Tweet
-</button>
+<a href="https://twitter.com" target="_blank" class="button-link">
+  <button class="Tweet">
+    Tweet
+  </button>
+</a>
