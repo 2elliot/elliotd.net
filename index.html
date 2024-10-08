@@ -1,19 +1,62 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <link rel="stylesheet" href="styles/style.css" loading="block">
-      <meta charset="UTF-8">
-      <title>Elliot D'Alessandro</title>
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta name="description" content="">
-    </head> 
-  <body>
-    <h1 id="hometitle">Elliot D'Alessandro</h1>
-    <h2 id="homesubtitle">My Portfolio</h2>
-    <div class="row">
-      <a class="link" href=https://elliotd.net/button_testing>Button testing</a>
-      <a class="link" href=https://elliotd.net/text_testing>Text testing</a>
-      <a class="link" href="https://elliotd.net/youtube_testing">Youtube testing</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <h1><a href="#">Your Name</a></h1> <!-- Changed to h1 for better semantics -->
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </body>
+  </header>
+  
+
+  <section id="hero">
+    <div class="overlay">
+      <h2>Hi, I'm Elliot</h2>
+      <p>Game Developer | Software Engineer | Designer</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Details about you.</p>
+  </section>
+  
+  <section id="projects">
+    <h2>My Projects</h2>
+    <p>Details about your projects.</p>
+  </section>
+  
+  <section id="education">
+    <h2>Education</h2>
+    <p>Your education details.</p>
+  </section>
+  
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>elliotjdalessandro@gmail.com</p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Elliot D'Alessandro. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="parallax.js"></script>
+</body>
 </html>
