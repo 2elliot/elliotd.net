@@ -3,60 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Your Name - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Your Name's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <h1><a href="#">Your Name</a></h1> <!-- Changed to h1 for better semantics -->
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <div id="terminal">
+    <div id="welcome-screen">
+      <pre>
+ __    __    __                          
+/ / /\ \ \___| | ___ ___  _ __ ___   ___ 
+\ \/  \/ / _ \ |/ __/ _ \| '_ ` _ \ / _ \
+ \  /\  /  __/ | (_| (_) | | | | | |  __/
+  \/  \/ \___|_|\___\___/|_| |_| |_|\___|
+
+Welcome to Elliot's Portfolio
+      </pre>
+      <div id="commands">
+        <p><a href="#about" onclick="showSection('about')">About</a></p>
+        <p><a href="#projects" onclick="showSection('projects')">Projects</a></p>
+        <p><a href="#education" onclick="showSection('education')">Education</a></p>
+        <p><a href="#contact" onclick="showSection('contact')">Contact</a></p>
+      </div>
     </div>
-  </header>
-  
+    
+    <div id="output"></div>
+  </div>
 
-  <section id="hero">
-    <div class="overlay">
-      <h2>Hi, I'm Elliot</h2>
-      <p>Game Developer | Software Engineer | Designer</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Details about you.</p>
-  </section>
-  
-  <section id="projects">
-    <h2>My Projects</h2>
-    <p>Details about your projects.</p>
-  </section>
-  
-  <section id="education">
-    <h2>Education</h2>
-    <p>Your education details.</p>
-  </section>
-  
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>elliotjdalessandro@gmail.com</p>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Elliot D'Alessandro. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="parallax.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

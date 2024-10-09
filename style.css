@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: green;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#terminal {
+  width: 600px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  border: 1px solid #00ff00;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is centered properly */
+}
+
+pre {
+  font-size: 14px;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00ff00;
+  text-decoration: underline;
+}
+
+#commands {
+  text-align: center; /* Center the commands as well */
+}
+
+#output {
+  flex-grow: 1;
+  white-space: pre-wrap;
+  margin-top: 10px;
+  overflow-y: auto;
+}
