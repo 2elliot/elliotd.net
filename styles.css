@@ -101,6 +101,60 @@ html {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
+/* Back button
+/* Default styles for desktop */
+.top-left {
+  position: absolute;
+  top: 10px;
+  left: 20px; /* Desktop positioning */
+}
+
+/* Style the button */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px; /* Desktop size */
+  background-color: #007BFF; /* Match your website's style */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px; /* Default font size */
+  font-family: Arial, sans-serif; /* Match your site's font */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 10px; /* Space from the left edge */
+}
+
+/* Add hover effects */
+.back-button:hover {
+  background-color: #0056b3; /* Slightly darker blue for hover */
+}
+
+/* Responsive styles for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+  .top-left {
+    top: 5px; /* Reduce top margin */
+    left: 10px; /* Bring closer to the edge */
+  }
+
+  .back-button {
+    padding: 8px 15px; /* Smaller button size */
+    font-size: 14px; /* Smaller font */
+  }
+}
+
+@media (max-width: 480px) {
+  .top-left {
+    top: 5px; /* Same top margin */
+    left: 5px; /* Align closer for very small screens */
+  }
+
+  .back-button {
+    padding: 6px 12px; /* Further reduce size */
+    font-size: 12px; /* Smaller font for narrow screens */
+  }
+}
+
+
+
 /* Fade-in effect */
 @keyframes fadeIn {
   from {
@@ -117,6 +171,10 @@ html {
   animation: fadeIn 0.8s ease-in-out;
   animation-delay: 0.2s;
   animation-fill-mode: both;
+}
+
+.center-item {
+  text-align: center;
 }
 
 /* Header animation */
