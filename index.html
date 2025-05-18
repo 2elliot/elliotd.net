@@ -2,6 +2,44 @@
 <html lang="en">
 
 <head>
+
+  <!-- Preload background images -->
+  <link rel="preload" href="images/Backgrounds/Background.jpg" as="image">
+  <link rel="preload" href="images/Backgrounds/Background2.png" as="image">
+  <link rel="preload" href="images/Backgrounds/Background3.jpg" as="image">
+  <link rel="preload" href="images/Backgrounds/Background4.png" as="image">
+  <link rel="preload" href="images/Backgrounds/Background5.png" as="image">
+
+  <script>
+    const images = [
+      'images/Backgrounds/Background.jpg',
+      'images/Backgrounds/Background2.png',
+      'images/Backgrounds/Background3.jpg',
+      'images/Backgrounds/Background4.png',
+      'images/Backgrounds/Background5.png'
+    ];
+
+    const selectedImage = images[Math.floor(Math.random() * images.length)];
+    const css = `
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('${selectedImage}') no-repeat center center / cover;
+      filter: blur(8px);
+      z-index: -1;
+      pointer-events: none;
+    }
+  `;
+    const styleTag = document.createElement("style");
+    styleTag.textContent = css;
+    document.head.appendChild(styleTag);
+  </script>
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elliot D'Alessandro</title>
@@ -82,37 +120,6 @@
     <p>Contact me: <a href="mailto:elliotjdalessandro@gmail.com" , target="_blank">elliotjdalessandro[at]gmail.com</a>
     </p>
   </footer>
-
-  <script>
-    const images = [
-      'images/Backgrounds/Background.jpg',
-      'images/Backgrounds/Background2.png',
-      'images/Backgrounds/Background3.jpg',
-      'images/Backgrounds/Background4.png',
-      'images/Backgrounds/Background5.png'
-      // Add more paths as needed
-    ];
-
-    const selectedImage = images[Math.floor(Math.random() * images.length)];
-
-    const bgStyle = document.createElement('style');
-    bgStyle.innerHTML = `
-      body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: url('${selectedImage}') no-repeat center center / cover;
-        filter: blur(8px);
-        z-index: -1;
-        pointer-events: none;
-      }
-    `;
-    document.head.appendChild(bgStyle);
-  </script>
-
 </body>
 
 </html>
