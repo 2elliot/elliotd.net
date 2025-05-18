@@ -3,17 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="images/icon_pfp.ico">
-
-  <meta property="og:title" content="Elliot D'Alessandro">
-  <meta property="og:description" content="Personal website.">
-  <meta property="og:image" content="https://elliotd.net/images/icon_pfp.jpg">
-  <meta property="og:url" content="https://elliotd.net">
-  <meta property="og:type" content="website">
-
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elliot D'Alessandro - Portfolio</title>
+  <title>Elliot D'Alessandro</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -31,27 +22,97 @@
 <body>
   <header>
     Elliot D'Alessandro
+    <div class="subtitle">- My Work -</div>
   </header>
 
-  <div class="bio">
-    <p>This is a temporary website. Check in later for updates!</p>
-  </div>
-
   <div class="content-container">
-    <div class="center-item">
-      <a href="/portfolio.html">
-        <h2>Check out my portfolio</h2>
+    <div class="content-item">
+      <h2>Northwoods</h2>
+      <p>
+        A game made for the Oregon Game Project Challenge 2024-2025 over the span of 9 months
+        <br>
+
+      </p>
+      <a href="https://tms.ogpc.info/Games/Details/1b7379ac-c1a0-42f4-8198-cd94d069b991" , target="_blank">
+        <img src="images/NorthwoodsTitle.png" alt="Northwoods">
       </a>
-      <!-- <a href="/lessthan2.html">
-        <h2>Check out LessThan2</h2>
-      </a> -->
+    </div>
+
+    <div class="content-item">
+      <h2>Nocte</h2>
+      <p>
+        A game made for the Oregon Game Project Challenge 2023-2024 over the span of 9 months
+        <br>
+        Explore the world of Nocte, an open world 3d roguelike where you explore a completely procedural world. Collect
+        weapons, fight enemies, and upgrade yourself.
+      </p>
+      <a href="https://tms.ogpc.info/Games/Details/cd7fde0e-bea4-4f2e-9692-9df177798a7a" , target="_blank">
+        <img src="images/nocteposterv5.png" alt="Nocte">
+      </a>
+    </div>
+
+    <div class="content-item">
+      <h2>HeavyVille</h2>
+      <p>
+        A game made for the Game Maker's Toolkit Game Jam 2024 over the span of 4 days
+        <br>
+        Value the items of the town's customers and make sure to keep them happy. In the town of Heavvyville, the price
+        of an item is equal to its weight, so make sure to keep your scales accurate!
+      </p>
+      <a href="https://fractaldev.itch.io/heavyville" , target="_blank">
+        <img src="images/HeavyvilleTitle.png" alt="HeavyVille">
+      </a>
+    </div>
+
+    <div class="content-item">
+      <h2>Symbiont</h2>
+      <p>
+        A game made for Oregon Game Jam Project 2022-2023 over the span of 3 months
+        <br>
+        Fight through an endless dungeon, teleporting between rooms and taking control of your enemies. But be careful,
+        you have no control of your movement, so you must rely on your enemies to move you around the dungeon.
+      </p>
+      <a href="https://tms.ogpc.info/Games/Details/d188f6c3-fb44-4d45-859c-2b3abd0a0ab2" , target="_blank">
+        <img src="images/symbiontposter.png" alt="Symbiont">
+      </a>
     </div>
   </div>
-  
+
   <footer>
     <p>Contact me: <a href="mailto:elliotjdalessandro@gmail.com" , target="_blank">elliotjdalessandro[at]gmail.com</a>
     </p>
   </footer>
+
+  <script>
+    const images = [
+      'images/Backgrounds/Background.jpg',
+      'images/Backgrounds/Background2.png',
+      'images/Backgrounds/Background3.jpg',
+      'images/Backgrounds/Background4.png',
+      'images/Backgrounds/Background5.png'
+      // Add more paths as needed
+    ];
+
+    const selectedImage = images[Math.floor(Math.random() * images.length)];
+
+    const bgStyle = document.createElement('style');
+    bgStyle.innerHTML = `
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: url('${selectedImage}') no-repeat center center / cover;
+        filter: blur(8px);
+        z-index: -1;
+        pointer-events: none;
+      }
+    `;
+    document.head.appendChild(bgStyle);
+  </script>
+
 </body>
 
 </html>
