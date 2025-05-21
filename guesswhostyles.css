@@ -1,0 +1,254 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 20px;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  height: calc(100% - 60px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1vw;
+  flex: 1;
+  max-width: 75%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Card base styling */
+.card {
+  background-color: white;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.1s;
+  overflow: hidden;
+  aspect-ratio: 1.075 / 1.625;
+  width: 100%;
+  height: 100%;
+  perspective: 800px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Card flipping animation */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card.covered .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front img,
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Tooltip on hover */
+.card:hover::after {
+  content: attr(data-description);
+  position: absolute;
+  bottom: -1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 4px 6px;
+  font-size: 1.5vw;
+  white-space: nowrap;
+  border-radius: 4px;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.card::after {
+  opacity: 0;
+}
+
+/* Sidebar layout */
+.sidebar {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Description box with formatting */
+.description-box {
+  background: white;
+  padding: 10px;
+  border: 1px solid #aaa;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.description-box b {
+  display: block;
+  font-size: 1.2vw;
+  margin-bottom: 0.5em;
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form input {
+  padding: 5px;
+  font-size: 1vw;
+}
+
+/* Turn indicator styling */
+.turn-indicator {
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  background-color: #ccc;
+  margin: 0 20px 10px 20px;
+  border-radius: 4px;
+}
+
+/* Button styling */
+button {
+  padding: 10px;
+  font-size: 1vw;
+  border: none;
+  background: #bbb;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s;
+}
+
+button:hover {
+  background: #999;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Tooltip styling for buttons */
+button[title] {
+  position: relative;
+}
+
+button[title]::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.75em;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+button[title]:hover::after {
+  opacity: 1;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #181818;
+  color: #eee;
+}
+
+body.dark-mode .sidebar {
+  background: #2e2e2e;
+}
+
+body.dark-mode .card {
+  border-color: #444;
+}
+
+body.dark-mode .description-box {
+  background: #222;
+  color: #ddd;
+  border-color: #444;
+}
+
+body.dark-mode button {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode button:hover {
+  background: #444;
+}
+
