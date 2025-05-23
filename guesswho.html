@@ -16,7 +16,7 @@
       <!-- Cards will be inserted here -->
     </div>
     <div class="sidebar">
-      <button id="shuffleButton" title="Randomize the board layout">Shuffle</button>
+      <button id="shuffleButton" title="Randomize the board layout">New game</button>
       <button id="clearButton" title="Uncover all cards">Reset</button>
       <div class="description-box" id="descriptionBox">
         Hover over a card to see details.
@@ -75,11 +75,14 @@
         characters = data.map((char, i) => ({
           ...char,
           index: i,
-          covered: false
+          covered: false,
+          highlighted: false
         }));
 
         // Shuffle once on first load
         characters = characters.sort(() => Math.random() - 0.5);
+
+        selectRandomCharacter();
 
         renderBoard();
       } catch (error) {
@@ -140,18 +143,34 @@
           descriptionBox.textContent = "Hover over a card to see details.";
         });
 
+        if (char.highlighted) {
+          card.classList.add('highlighted');
+        }
+
         board.appendChild(card);
       });
     }
 
+    function selectRandomCharacter() {
+      // Reset all characters
+      characters.forEach(char => {
+        char.highlighted = false;
+      });
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      characters[randomIndex].highlighted = true;
+    }
+
     shuffleButton.addEventListener("click", () => {
       characters = characters.sort(() => Math.random() - 0.5);
+      selectRandomCharacter();
       renderBoard();
     });
 
     clearButton.addEventListener("click", () => {
       characters.forEach(char => {
-        char.covered = false;
+        if (char.covered) {
+          char.covered = false;
+        }
       });
       renderBoard();
     });

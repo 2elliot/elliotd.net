@@ -461,3 +461,9 @@ body.dark-mode .settings-icon {
 .corner-buttons button:hover {
   background-color: #666;
 }
+
+.card.highlighted {
+  outline: 3px solid gold;
+  box-shadow: 0 0 10px 2px gold;
+}
+
