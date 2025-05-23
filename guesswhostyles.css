@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -124,7 +125,6 @@ h1 {
   gap: 10px;
 }
 
-/* Description box with formatting */
 .description-box {
   background: white;
   padding: 10px;
@@ -133,15 +133,23 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start; /* changed from center to left-align */
+  text-align: left;        /* text itself left-aligned */
+  font-weight: 2vw;
 }
 
-.description-box b {
-  display: block;
-  font-size: 1.2vw;
+.description-box .name {
+  font-size: 2vw;          /* bigger name font */
+  font-weight: bold;
   margin-bottom: 0.5em;
 }
+
+.description-box .description {
+  font-size: 1.1vw;
+  line-height: 1.4;
+  color: #333;
+}
+
 
 /* Form layout */
 .form {
@@ -190,6 +198,7 @@ button:active {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -197,12 +206,12 @@ button:active {
 }
 
 /* Tooltip styling for buttons */
-button[title] {
+button[data-tooltip] {
   position: relative;
 }
 
-button[title]::after {
-  content: attr(title);
+button[data-tooltip]::after {
+  content: attr(data-tooltip);
   position: absolute;
   bottom: 125%;
   left: 50%;
@@ -214,11 +223,12 @@ button[title]::after {
   border-radius: 4px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s;
+  transition: opacity 0.1s ease-in-out;
   white-space: nowrap;
+  z-index: 1000;
 }
 
-button[title]:hover::after {
+button[data-tooltip]:hover::after {
   opacity: 1;
 }
 
@@ -252,3 +262,156 @@ body.dark-mode button:hover {
   background: #444;
 }
 
+.settings-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
+.settings-icon {
+  font-size: 1.2em;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+  user-select: none;
+}
+
+.settings-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 42px;
+  right: 0;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 8px 12px;
+  gap: 8px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 101;
+  min-width: 160px;
+  font-size: 1.5em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.settings-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.setting-button {
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.setting-button:hover {
+  background: #ddd;
+}
+
+body.dark-mode .settings-menu {
+  background: #2e2e2e;
+  border-color: #444;
+  color: #ddd;
+}
+
+body.dark-mode .settings-icon {
+  background: #444;
+  color: #eee;
+}
+
+body.dark-mode .setting-button:hover {
+  background: #444;
+}
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #181818;
+  color: #eee;
+}
+
+body.dark-mode .sidebar {
+  background: #2e2e2e;
+}
+
+body.dark-mode .card {
+  border-color: #444;
+}
+
+body.dark-mode .description-box {
+  background: #222;
+  color: #ddd;
+  border-color: #444;
+}
+
+body.dark-mode button {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode button:hover {
+  background: #444;
+}
+
+body.dark-mode .settings-menu {
+  background: #2e2e2e;
+  border-color: #444;
+  color: #ddd;
+}
+
+body.dark-mode .settings-icon {
+  background: #444;
+  color: #eee;
+}
+
+#toggles {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+#toggles button {
+  font-size: 1.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #eee;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+#toggles button:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+
+/* DARK MODE STYLES */
+.dark-mode #toggles button {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode #toggles button:hover {
+  background-color: #333;
+}
