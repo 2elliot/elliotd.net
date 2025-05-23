@@ -9,13 +9,7 @@
 </head>
 
 <body>
-  <h1>Guess Who Dictators</h1>
-  <div id="toggles">
-    <button id="darkModeToggle" title="Toggle dark mode for the website">🌓</button>
-    <button id="hardModeToggle" title="Toggle hard mode: hides character descriptions">🎯</button>
-  </div>
-
-
+  <h1 id="gameTitle">Guess Who Dictators!</h1>
 
   <div class="main">
     <div class="grid" id="board">
@@ -27,6 +21,8 @@
       <div class="description-box" id="descriptionBox">
         Hover over a card to see details.
       </div>
+      <button id="hardModeToggle" title="Hides descriptions">Hard mode</button>
+      <button id="darkModeToggle" title="Toggles dark mode">Dark mode</button>
     </div>
   </div>
 
@@ -121,7 +117,7 @@
         const back = document.createElement("div");
         back.className = "card-back";
         const backImg = document.createElement("img");
-        backImg.src = "images/Loveless.png";
+        backImg.src = "images/guesswho/Loveless.png";
         backImg.alt = "Covered";
         back.appendChild(backImg);
 
