@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Adolf Hitler",
+    "img": "https://elliotd.net/images/guesswho/Adolf%20Hitler.png",
+    "description": "Leader of Nazi Germany, responsible for initiating World War II and orchestrating the Holocaust, resulting in the deaths of six million Jews and millions of others. He died by suicide in 1945 as the Allies closed in on Berlin."
+  },
+  {
+    "name": "Slobodan Milosevic",
+    "img": "https://elliotd.net/images/guesswho/Slobodan%20Milosevic.png",
+    "description": "President of Serbia and later Yugoslavia, he played a key role in the Balkan wars of the 1990s and was implicated in war crimes including ethnic cleansing during the Bosnian and Kosovo conflicts."
+  },
+  {
+    "name": "Benjamin Netanyahu",
+    "img": "https://elliotd.net/images/guesswho/Benjamin%20Netanyahu.png",
+    "description": "Prime Minister of Israel accused of exacerbating the Israeli-Palestinian conflict, especially during the 2023 Gaza War. Critics cite policies and military actions that resulted in high civilian casualties and accusations of genocide."
+  },
+  {
+    "name": "Mao Zedong",
+    "img": "https://elliotd.net/images/guesswho/Mao%20Zedong.png",
+    "description": "Founding father of the People's Republic of China. His policies, including the Great Leap Forward and the Cultural Revolution, led to the deaths of tens of millions through famine, persecution, and purges."
+  },
+  {
+    "name": "Joseph Stalin",
+    "img": "https://elliotd.net/images/guesswho/Joseph%20Stalin.png",
+    "description": "Leader of the Soviet Union from the 1920s to 1953. Known for his totalitarian regime, forced collectivization, political purges, and gulags, which resulted in the deaths of millions of Soviet citizens."
+  },
+  {
+    "name": "Benito Mussolini",
+    "img": "https://elliotd.net/images/guesswho/Benito%20Mussolini.png",
+    "description": "Fascist dictator of Italy and ally to Hitler during World War II. He led the country through aggressive nationalism and was responsible for colonial atrocities before being executed by partisans in 1945."
+  },
+  {
+    "name": "Theoneste Bagosora",
+    "img": "https://elliotd.net/images/guesswho/Theoneste%20Bagosora.png",
+    "description": "Rwandan military officer and key architect of the 1994 Rwandan Genocide, in which over 800,000 Tutsis and moderate Hutus were slaughtered over the span of 100 days."
+  },
+  {
+    "name": "Talaat Pasha",
+    "img": "https://elliotd.net/images/guesswho/Talaat%20Pasha.png",
+    "description": "Ottoman official and main architect of the Armenian Genocide during World War I. He ordered mass deportations and executions that resulted in the deaths of over a million Armenians."
+  },
+  {
+    "name": "Hideki Tojo",
+    "img": "https://elliotd.net/images/guesswho/Hideki%20Tojo.png",
+    "description": "Prime Minister of Japan during World War II. He authorized the attack on Pearl Harbor and oversaw war crimes committed by Japanese forces, particularly in China."
+  },
+  {
+    "name": "Henry Kissenger",
+    "img": "https://elliotd.net/images/guesswho/Henry%20Kissenger.png",
+    "description": "U.S. Secretary of State known for controversial Cold War diplomacy. Oversaw secret bombings in Southeast Asia, notably in Laos and Cambodia, which caused massive civilian casualties."
+  },
+  {
+    "name": "Narendra Modi",
+    "img": "https://elliotd.net/images/guesswho/Narendra%20Modi.png",
+    "description": "Prime Minister of India criticized for his role in the 2002 Gujarat riots and later handling of the COVID-19 pandemic, as well as policies impacting Kashmir and religious minorities."
+  },
+  {
+    "name": "Osama Bin Laden",
+    "img": "https://elliotd.net/images/guesswho/Osama%20Bin%20Laden.png",
+    "description": "Founder of al-Qaeda and mastermind of the 9/11 attacks, which killed nearly 3,000 people in the U.S. He declared jihad against the West and was killed in 2011 by U.S. forces."
+  },
+  {
+    "name": "Saddam Hussein",
+    "img": "https://elliotd.net/images/guesswho/Saddam%20Hussein.png",
+    "description": "President of Iraq for over two decades. Known for brutal repression of political enemies, the Iran-Iraq War, the invasion of Kuwait, and genocidal campaigns against the Kurds."
+  },
+  {
+    "name": "Augusto Pinochet",
+    "img": "https://elliotd.net/images/guesswho/Augusto%20Pinochet.png",
+    "description": "Chilean military dictator who took power in a 1973 U.S.-backed coup. His regime was marked by human rights abuses, torture, and forced disappearances of political dissidents."
+  },
+  {
+    "name": "Kim Jong Un",
+    "img": "https://elliotd.net/images/guesswho/Kim%20Jong%20Un.png",
+    "description": "Supreme Leader of North Korea. His regime has been accused of widespread human rights violations, including forced labor camps and deliberate isolation leading to famine."
+  },
+  {
+    "name": "Pol Pot",
+    "img": "https://elliotd.net/images/guesswho/Pol%20Pot.png",
+    "description": "Leader of the Khmer Rouge and dictator of Cambodia. Orchestrated the Cambodian Genocide in which 1.5 to 2 million people died from executions, starvation, and forced labor."
+  },
+  {
+    "name": "Ayatollah Khomeini",
+    "img": "https://elliotd.net/images/guesswho/Ayatollah%20Khomeini.png",
+    "description": "Led the 1979 Iranian Revolution, overthrowing the Shah and founding the Islamic Republic. Imposed a theocratic regime marked by executions of political opponents and religious repression."
+  },
+  {
+    "name": "Francisco Franco",
+    "img": "https://elliotd.net/images/guesswho/Francisco%20Franco.png",
+    "description": "Spanish general who ruled Spain as a military dictator from 1939 to 1975. His regime was characterized by authoritarianism, censorship, and repression of regional cultures and dissent."
+  },
+  {
+    "name": "Juvenal Habyarimana",
+    "img": "https://elliotd.net/images/guesswho/Juvenal%20Habyarimana.png",
+    "description": "President of Rwanda whose regime deepened ethnic divides. His assassination in 1994 triggered the Rwandan Genocide. His policies were seen as a precursor to the conflict."
+  },
+  {
+    "name": "Vladimir Putin",
+    "img": "https://elliotd.net/images/guesswho/Vladimir%20Putin.png",
+    "description": "President of Russia who launched the 2022 invasion of Ukraine. Accused of war crimes including targeting civilians and forcibly relocating Ukrainian children."
+  },
+  {
+    "name": "Nicolae Ceaușescu",
+    "img": "https://elliotd.net/images/guesswho/Nicolae%20Ceaușescu.png",
+    "description": "Romanian dictator known for his cult of personality, economic mismanagement, and oppressive surveillance state. Executed in 1989 after a violent revolution."
+  },
+  {
+    "name": "Bashar Al-Assad",
+    "img": "https://elliotd.net/images/guesswho/Bashar%20Al-Assad.png",
+    "description": "Syrian president who violently cracked down on uprisings, leading to a brutal civil war. Accused of using chemical weapons and committing widespread human rights violations."
+  },
+  {
+    "name": "Idi Amin",
+    "img": "https://elliotd.net/images/guesswho/Idi%20Amin.png",
+    "description": "Military dictator of Uganda in the 1970s. His rule was marked by ethnic persecution, economic collapse, and the deaths of an estimated 300,000 people."
+  },
+  {
+    "name": "Omar al-Bashir",
+    "img": "https://elliotd.net/images/guesswho/Omar%20al-Bashir.png",
+    "description": "Sudanese leader ousted in 2019. Responsible for the Darfur genocide and multiple wars. Indicted by the International Criminal Court for crimes against humanity."
+  }
+]
