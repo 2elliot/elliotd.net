@@ -161,6 +161,9 @@
     }
 
     shuffleButton.addEventListener("click", () => {
+      characters.forEach(char => {
+        char.covered = false;
+      });
       characters = characters.sort(() => Math.random() - 0.5);
       selectRandomCharacter();
       renderBoard();
