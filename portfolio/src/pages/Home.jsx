@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { projects } from '../data/projects'
 import ProjectGrid from '../components/ProjectGrid'
 
-export default function Home(){
+export default function Home() {
   return (
     <div className="prose prose-invert mx-auto max-w-4xl">
       <section className="mb-8">
@@ -24,33 +24,13 @@ export default function Home(){
         <h2 className="text-2xl">About</h2>
         <p>Game designer and developer experienced with Unity.</p>
         <p>Socials:{' '}
-            <a className="underline" href="mailto:elliotjdalessandro@gmail.com" target="_blank">Email</a>{' • '}
-            <a className="underline" href="https://github.com/2Elliot" target="_blank">GitHub</a>{' • '}
-            <a className="underline" href="https://www.linkedin.com/in/elliot-d-alessandro-520aa02a8/" target="_blank">LinkedIn</a>{' • '}
-            <a className="underline" href="https://2elliot.itch.io/" target="_blank">Itch.io</a>{' • '}
-            <a className="underline" href="documents/ElliotDAlessandro_Resume.pdf" target="_blank">Resume</a>{' • '}
-            <a className="underline" href="https://www.instagram.com/elliotunderscore/" target="_blank">Instagram</a>
+          <a className="underline" href="mailto:elliotjdalessandro@gmail.com" target="_blank">Email</a>{' • '}
+          <a className="underline" href="https://github.com/2Elliot" target="_blank">GitHub</a>{' • '}
+          <a className="underline" href="https://www.linkedin.com/in/elliot-d-alessandro-520aa02a8/" target="_blank">LinkedIn</a>{' • '}
+          <a className="underline" href="https://2elliot.itch.io/" target="_blank">Itch.io</a>{' • '}
+          <a className="underline" href="/documents/resume.pdf" target="_blank">Resume</a>{' • '}
+          <a className="underline" href="https://www.instagram.com/elliotunderscore/" target="_blank">Instagram</a>
         </p>
-        <div class="social-links">
-      <a href="mailto:elliotjdalessandro@gmail.com" target="_blank" aria-label="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://github.com/2Elliot" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/elliot-d-alessandro-520aa02a8/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://2elliot.itch.io/" target="_blank" aria-label="Itch.io">
-        <i class="fab fa-itch-io"></i>
-      </a>
-      <a href="documents/ElliotDAlessandro_Resume.pdf" target="_blank" aria-label="Resume">
-        <i class="fas fa-file-alt"></i>
-      </a>
-      <a href="https://www.instagram.com/elliotunderscore/" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
       </section>
     </div>
   )
