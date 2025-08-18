@@ -20,6 +20,6 @@ body{
 }
 
 /* small card */
-.card{
-  @apply rounded-2xl bg-white/4 p-4 backdrop-blur-sm border border-white/6 shadow-md;
+.card {
+  @apply rounded-2xl bg-white/10 p-4 backdrop-blur-sm border border-white/20 shadow-md;
 }
