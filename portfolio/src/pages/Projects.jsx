@@ -25,11 +25,6 @@ export default function Projects(){
       <SortControls sortBy={sortBy} setSortBy={setSortBy} filterType={filterType} setFilterType={setFilterType} types={types} />
 
       <ProjectGrid projects={filtered} />
-
-      <section className="mt-8 prose prose-invert">
-        <h2>How it works</h2>
-        <p>Each thumbnail links to its own page. To add or edit projects, update <code>src/data/projects.js</code>. Each project can include images and external links.</p>
-      </section>
     </div>
   )
 }
