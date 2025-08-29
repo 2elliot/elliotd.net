@@ -1,3 +1,6 @@
+// DEPRECATED
+// Now using src/projects/
+
 export const projects = [
     {
         id: 'onthelamb',

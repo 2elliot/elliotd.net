@@ -12,9 +12,14 @@
     "dependencies": {
         "dayjs": "^1.11.9",
         "framer-motion": "^10.12.14",
+        "front-matter": "^4.0.2",
+        "gray-matter": "^4.0.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-router-dom": "^6.14.1"
+        "react-markdown": "^10.1.0",
+        "react-router-dom": "^6.14.1",
+        "rehype-raw": "^7.0.0",
+        "remark-gfm": "^4.0.1"
     },
     "devDependencies": {
         "@vitejs/plugin-react": "^5.0.0",
