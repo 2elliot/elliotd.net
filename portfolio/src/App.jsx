@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import ProjectPage from './pages/ProjectPage'
+import About from './pages/About'
 import NotFound from './pages/NotFound'
 
 export default function App(){
@@ -16,6 +17,7 @@ export default function App(){
           <Route path="/" element={<Home/>} />
           <Route path="/projects" element={<Projects/>} />
           <Route path="/projects/:id" element={<ProjectPage/>} />
+          <Route path="/about" element={<About/>} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
       </main>
