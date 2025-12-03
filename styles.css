@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Press Start 2P', monospace;
     height: 100vh;
     background: #000000;
     color: #00ff00;
