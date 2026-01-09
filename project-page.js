@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const project = projectDetails[projectId];
         
         // Update page title
-        document.title = `${project.title} - Your Name`;
+        document.title = `${project.title} - Elliot D'Alessandro`;
         
         // Build project page HTML
         let html = `

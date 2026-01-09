@@ -68,15 +68,6 @@ main {
     align-items: flex-start;
 }
 
-.project-image {
-    width: 200px;
-    height: 150px;
-    flex-shrink: 0;
-    object-fit: cover;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-}
-
 .project-text {
     flex: 1;
 }
@@ -96,6 +87,20 @@ main {
     color: #666;
     font-size: 1.05rem;
     line-height: 1.7;
+}
+
+.project-media {
+    width: 400px;
+    height: 225px;
+    flex-shrink: 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+.project-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Responsive Design */
