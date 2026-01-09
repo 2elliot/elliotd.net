@@ -5,30 +5,30 @@ const projects = [
         id: "sheep",
         title: "On the Lamb!",
         shortDescription: "A game where you lasso sheep and then feed them to the cthulhu in your backyard. Built in Unity in 4 days for the GMTK 2025 game jam.",
-        image: "images/sheep/SheepPoster.png"
+        video: "videos/Sheep_Trailer.mp4"
     },
     {
         id: "northwoods",
         title: "Northwoods",
         shortDescription: "A open-world survival game set in the Mt. St. Helens region. Scavenge for resources, build shelter, and survive the wilderness. Built in Unity for our 2025 state competition.",
-        image: "images/northwoods/NorthwoodsPoster.png"
+        video: "videos/Northwoods_Trailer_Condensed.mp4"
     },
     {
         id: "heavyville",
         title: "Heavyville",
         shortDescription: "A simple physics puzzle game where you weight your client's items. Built in Unity in 4 days for the GMTK 2024 game jam.",
-        image: "images/heavyville/HeavyvillePoster.png"
+        video: "videos/Heavyville_Trailer.mp4"
     },
     {
         id: "nocte",
         title: "Nocte",
         shortDescription: "A open-world procedurally generated roguelike where you explore a vast world. Built in Unity for our 2024 state competition.",
-        image: "images/nocte/NoctePoster.png"
+        video: "videos/Nocte_Trailer_Condensed.mp4"
     },
     {
         id: "symbiont",
         title: "Symbiont",
         shortDescription: "An on-rails shooter where you teleport between enemies and cameras and fight your way through randomized rooms. Built in Unity for our 2023 state competition.",
-        image: "images/symbiont/SymbiontPoster.png"
+        video: "videos/Symbiont_Trailer_Condensed.mp4"
     }
 ];
