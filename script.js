@@ -7,8 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
         projectItem.className = 'project-item';
         projectItem.href = `project.html?id=${project.id}`;
         
+        // Updated with poster and preload optimization
         const mediaHtml = project.video 
-            ? `<video class="project-video" autoplay loop muted playsinline>
+            ? `<video class="project-video" 
+                      autoplay 
+                      loop 
+                      muted 
+                      playsinline 
+                      poster="${project.posterImage || project.thumbnail || ''}" 
+                      preload="metadata">
                    <source src="${project.video}" type="video/mp4">
                </video>`
             : '<div class="project-media"></div>';
@@ -26,5 +33,17 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         
         projectsList.appendChild(projectItem);
+    });
+    
+    // Handle video loading and autoplay
+    const videos = document.querySelectorAll('.project-video');
+    
+    videos.forEach(video => {
+        // Ensure smooth playback once loaded
+        video.addEventListener('canplay', () => {
+            video.play().catch(err => {
+                console.log('Autoplay prevented:', err);
+            });
+        });
     });
 });
