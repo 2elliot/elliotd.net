@@ -24,7 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="project-content">
                 <div class="project-text">
                     <h3>${project.title}</h3>
+                    <p class="date">${project.dateStart}${project.dateEnd ? ' - ' + project.dateEnd : ''}</p>
                     <p>${project.shortDescription}</p>
+                    <div class="tech-tag">
+                        ${project.technologies ? project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join(' ') : ''}
+                    </div>
                 </div>
                 <div class="project-media">
                     ${mediaHtml}

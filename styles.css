@@ -45,7 +45,7 @@ main {
 }
 
 .project-item {
-    padding: 3rem 0;
+    padding: 3rem 1rem;
     border-bottom: 1px solid #e0e0e0;
     cursor: pointer;
     text-decoration: none;
@@ -74,7 +74,6 @@ main {
 
 .project-text h3 {
     font-size: 1.6rem;
-    margin-bottom: 0.75rem;
     color: #222;
     transition: color 0.3s;
 }
@@ -87,6 +86,13 @@ main {
     color: #666;
     font-size: 1.05rem;
     line-height: 1.7;
+}
+
+.project-text .date {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
 }
 
 .project-media {
@@ -137,5 +143,10 @@ main {
 
     .project-text p {
         font-size: 1rem;
+    }
+
+    .project-media {
+        width: 100%;
+        height: auto;
     }
 }
