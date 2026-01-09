@@ -1,25 +1,25 @@
 // Load projects into the list
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const projectsList = document.getElementById('projectsList');
-    
+
     projects.forEach(project => {
         const projectItem = document.createElement('a');
         projectItem.className = 'project-item';
         projectItem.href = `project.html?id=${project.id}`;
-        
-        // Updated with poster and preload optimization
-        const mediaHtml = project.video 
+
+        // Don't load video sources initially - just set up the video element with poster
+        const mediaHtml = project.video
             ? `<video class="project-video" 
                       autoplay 
                       loop 
                       muted 
                       playsinline 
                       poster="${project.posterImage || project.thumbnail || ''}" 
-                      preload="metadata">
-                   <source src="${project.video}" type="video/mp4">
+                      preload="none"
+                      data-src="${project.video}">
                </video>`
             : '<div class="project-media"></div>';
-        
+
         projectItem.innerHTML = `
             <div class="project-content">
                 <div class="project-text">
@@ -31,19 +31,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
         `;
-        
+
         projectsList.appendChild(projectItem);
     });
-    
-    // Handle video loading and autoplay
-    const videos = document.querySelectorAll('.project-video');
-    
-    videos.forEach(video => {
-        // Ensure smooth playback once loaded
-        video.addEventListener('canplay', () => {
-            video.play().catch(err => {
-                console.log('Autoplay prevented:', err);
-            });
+
+    // Load videos AFTER the page has fully loaded (progress bar complete)
+    window.addEventListener('load', () => {
+        const videos = document.querySelectorAll('.project-video[data-src]');
+        
+        videos.forEach((video, index) => {
+            // Stagger video loading by 100ms each
+            setTimeout(() => {
+                const source = document.createElement('source');
+                source.src = video.dataset.src;
+                source.type = 'video/mp4';
+                video.appendChild(source);
+                video.load();
+                
+                // Start playing as soon as first frame is available
+                video.addEventListener('loadeddata', () => {
+                    video.play().catch(err => {
+                        console.log('Autoplay prevented:', err);
+                    });
+                }, { once: true });
+            }, index * 100);
         });
     });
 });
