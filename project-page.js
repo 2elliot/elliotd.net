@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const project = projectDetails[projectId];
         
         // Update page title
-        document.title = `${project.title} - Your Name`;
+        document.title = `${project.title} - Elliot D'Alessandro`;
         
         // Build project page HTML
         let html = `
@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         projectContent.innerHTML = `
             <div class="project-header">
-                <h1>Project Not Found</h1>
+                <h1>Oops! Something went wrong.</h1>
             </div>
             <div class="project-blog-content">
-                <p>Sorry, the project you're looking for doesn't exist.</p>
+                <p>This isn't the project you're looking for</p>
             </div>
         `;
     }
