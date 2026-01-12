@@ -45,7 +45,7 @@ main {
 }
 
 .project-item {
-    padding: 3rem 1rem;
+    padding: 3rem 0;
     border-bottom: 1px solid #e0e0e0;
     cursor: pointer;
     text-decoration: none;
@@ -74,6 +74,7 @@ main {
 
 .project-text h3 {
     font-size: 1.6rem;
+    margin-bottom: 0.75rem;
     color: #222;
     transition: color 0.3s;
 }
@@ -88,13 +89,6 @@ main {
     line-height: 1.7;
 }
 
-.project-text .date {
-    display: block;
-    font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 1rem;
-}
-
 .project-media {
     width: 400px;
     height: 225px;
@@ -107,6 +101,22 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.contact-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
 }
 
 /* Responsive Design */
@@ -132,9 +142,10 @@ main {
         gap: 1rem;
     }
 
-    .project-image {
+    .project-media {
         width: 100%;
-        height: 200px;
+        height: auto;
+        aspect-ratio: 16 / 9;
     }
 
     .project-text h3 {
@@ -145,8 +156,12 @@ main {
         font-size: 1rem;
     }
 
-    .project-media {
-        width: 100%;
-        height: auto;
+    .contact-section {
+        margin-top: 3rem;
+        padding-top: 2rem;
+    }
+
+    .contact-links {
+        gap: 1.5rem;
     }
 }
