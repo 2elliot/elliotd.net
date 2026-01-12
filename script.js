@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     projects.forEach(project => {
         const projectItem = document.createElement('a');
         projectItem.className = 'project-item';
-        projectItem.href = `project.html?id=${project.id}`;
+        projectItem.href = `project.html?id=${project.id}#content`;
 
         // Don't load video sources initially - just set up the video element with poster
         const mediaHtml = project.video

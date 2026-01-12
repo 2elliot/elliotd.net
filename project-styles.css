@@ -11,6 +11,14 @@
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in 0.1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 .back-link:hover {
@@ -28,92 +36,158 @@
     color: #222;
 }
 
-.project-description {
-    margin-bottom: 2rem;
+/* Blog-style content */
+.project-blog-content {
+    line-height: 1.8;
 }
 
-.project-description p {
+.project-blog-content h2 {
+    font-size: 1.75rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.project-blog-content h2:first-child {
+    margin-top: 0;
+}
+
+.project-blog-content p {
     font-size: 1.1rem;
-    line-height: 1.8;
     color: #444;
     margin-bottom: 1.5rem;
 }
 
-.project-links {
-    display: flex;
-    gap: 1rem;
-    margin: 2.5rem 0;
-    flex-wrap: wrap;
+.project-blog-content a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.project-link {
+.project-blog-content a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Blog images */
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    border: 1px solid #ddd;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.blog-image:hover {
+    opacity: 0.9;
+}
+
+/* Image size classes */
+.blog-image.small {
+    width: 300px;
+}
+
+.blog-image.medium {
+    width: 500px;
+}
+
+.blog-image.large {
+    width: 700px;
+}
+
+.blog-image.full {
+    width: 100%;
+}
+
+/* Image modal/lightbox */
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+.image-modal img {
+    max-width: 95%;
+    max-height: 80%;
+    object-fit: contain;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.image-modal-caption {
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    max-width: 90%;
+    padding: 0 1rem;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.image-modal-close:hover {
+    color: #ccc;
+}
+
+/* Project buttons */
+.project-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
+    color: #fff !important;
+    text-decoration: none !important;
     font-weight: 500;
     transition: background-color 0.3s;
     border: 2px solid #007bff;
 }
 
-.project-link:hover {
+.project-button:hover {
     background-color: #0056b3;
     border-color: #0056b3;
 }
 
-.project-link.secondary {
+.project-button.secondary {
     background-color: transparent;
-    color: #007bff;
+    color: #007bff !important;
 }
 
-.project-link.secondary:hover {
+.project-button.secondary:hover {
     background-color: #007bff;
-    color: #fff;
+    color: #fff !important;
 }
 
-.project-screenshots {
-    margin-top: 3rem;
-}
-
-.project-screenshots h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: #222;
-    text-align: center;
-}
-
-.screenshot {
-    width: 100%;
-    margin-bottom: 2rem;
-    border: 1px solid #ddd;
-}
-
-.screenshot-caption {
-    text-align: center;
-    color: #666;
-    font-size: 0.95rem;
-    font-style: italic;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
-}
-
-.technologies {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #ddd;
-}
-
-.technologies h2 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: #222;
-}
-
-.tech-list {
+/* Technology tags */
+.tech-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+    margin-top: 1rem;
 }
 
 .tech-tag {
@@ -122,14 +196,39 @@
     font-size: 0.9rem;
     color: #555;
     border: 1px solid #ddd;
+    display: inline-block;
 }
 
 @media (max-width: 768px) {
+    .project-detail {
+        padding: 2rem 1rem;
+    }
+
     .project-header h1 {
         font-size: 2rem;
     }
 
-    .project-description p {
+    .project-blog-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-blog-content p {
         font-size: 1.05rem;
+    }
+
+    .blog-image {
+        margin: 1.5rem 0;
+    }
+
+    .blog-image.small,
+    .blog-image.medium,
+    .blog-image.large {
+        width: 100%;
+    }
+
+    .image-modal-close {
+        top: 10px;
+        right: 15px;
+        font-size: 30px;
     }
 }

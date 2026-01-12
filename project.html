@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details - Elliot D'Alessandro</title>
+    <title>Project Details - Your Name</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="project-styles.css">
 </head>
 <body>
-
     <main>
         <div class="project-detail" id="projectDetail">
             <!-- Project details will be loaded here -->
-            <a href="index.html" class="back-link">← Back to Projects</a>
+            <a href="index.html" class="back-link">← Back</a>
             <div id="projectContent">
                 <p>Loading project...</p>
             </div>
         </div>
     </main>
+
+    <!-- Image modal for full-size viewing -->
+    <div class="image-modal" id="imageModal">
+        <span class="image-modal-close" id="modalClose">&times;</span>
+        <img src="" alt="" id="modalImage">
+        <div class="image-modal-caption" id="modalCaption"></div>
+    </div>
 
     <script src="project-details.js"></script>
     <script src="project-page.js"></script>
