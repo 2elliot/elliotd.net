@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update page title
         document.title = `${project.title} - Elliot D'Alessandro`;
         
+        // Update Open Graph tags for social sharing
+        updateMetaTags(project.title, projectId);
+        
         // Build project page HTML
         let html = `
             <div class="project-header" id="content">
@@ -35,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         projectContent.innerHTML = `
             <div class="project-header">
-                <h1>Oops! Something went wrong.</h1>
+                <h1>Project Not Found</h1>
             </div>
             <div class="project-blog-content">
-                <p>This isn't the project you're looking for</p>
+                <p>Sorry, the project you're looking for doesn't exist.</p>
             </div>
         `;
     }
@@ -79,4 +82,34 @@ function setupImageModal() {
             modal.classList.remove('active');
         }
     });
+}
+
+// Update meta tags for social sharing
+function updateMetaTags(projectTitle, projectId) {
+    const description = `Check out ${projectTitle} - a project by Elliot D'Alessandro`;
+    const url = `https://elliotd.net/project.html?id=${projectId}`;
+    const image = `https://elliotd.net/images/${projectId}-preview.jpg`;
+    
+    // Update or create Open Graph tags
+    updateMetaTag('og:title', projectTitle);
+    updateMetaTag('og:description', description);
+    updateMetaTag('og:url', url);
+    updateMetaTag('og:image', image);
+    
+    // Update or create Twitter tags
+    updateMetaTag('twitter:title', projectTitle, 'name');
+    updateMetaTag('twitter:description', description, 'name');
+    updateMetaTag('twitter:image', image, 'name');
+}
+
+function updateMetaTag(property, content, attr = 'property') {
+    let element = document.querySelector(`meta[${attr}="${property}"]`);
+    if (element) {
+        element.setAttribute('content', content);
+    } else {
+        element = document.createElement('meta');
+        element.setAttribute(attr, property);
+        element.setAttribute('content', content);
+        document.head.appendChild(element);
+    }
 }
