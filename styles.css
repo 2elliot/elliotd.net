@@ -64,6 +64,8 @@ main {
 
 .project-content {
     display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
     gap: 2rem;
     align-items: flex-start;
 }
