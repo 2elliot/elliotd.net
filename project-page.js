@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const project = projectDetails[projectId];
         
         // Update page title
-        document.title = `${project.title} - Elliot D'Alessandro`;
+        document.title = `${project.title} - Your Name`;
         
         // Update Open Graph tags for social sharing
         updateMetaTags(project.title, projectId);
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         projectContent.innerHTML = `
             <div class="project-header">
-                <h1>Oops, something went wrong!</h1>
+                <h1>Project Not Found</h1>
             </div>
             <div class="project-blog-content">
-                <p>This isn't the page you're looking for 👋</p>
+                <p>Sorry, the project you're looking for doesn't exist.</p>
             </div>
         `;
     }
@@ -57,13 +57,20 @@ function setupImageModal() {
     
     images.forEach(img => {
         img.addEventListener('click', function() {
-            modal.classList.add('active');
-            
             // Use full resolution image if available, otherwise use current src
             const fullSrc = this.getAttribute('data-full-src') || this.src;
-            modalImg.src = fullSrc;
-            modalImg.alt = this.alt;
-            modalCaption.textContent = this.alt;
+            const altText = this.alt;
+            
+            // Preload the full-res image before showing modal
+            const loader = new Image();
+            loader.onload = function() {
+                // Once image is loaded, show it in modal
+                modalImg.src = fullSrc;
+                modalImg.alt = altText;
+                modalCaption.textContent = altText;
+                modal.classList.add('active');
+            };
+            loader.src = fullSrc;
         });
     });
     
@@ -89,9 +96,9 @@ function setupImageModal() {
 
 // Update meta tags for social sharing
 function updateMetaTags(projectTitle, projectId) {
-    const description = `Check out ${projectTitle} - a project by Elliot D'Alessandro`;
-    const url = `https://elliotd.net/project.html?id=${projectId}`;
-    const image = `https://elliotd.net/images/${projectId}-preview.jpg`;
+    const description = `Check out ${projectTitle} - a project by Your Name`;
+    const url = `https://yourdomain.com/project.html?id=${projectId}`;
+    const image = `https://yourdomain.com/images/${projectId}-preview.jpg`;
     
     // Update or create Open Graph tags
     updateMetaTag('og:title', projectTitle);
