@@ -58,7 +58,10 @@ function setupImageModal() {
     images.forEach(img => {
         img.addEventListener('click', function() {
             modal.classList.add('active');
-            modalImg.src = this.src;
+            
+            // Use full resolution image if available, otherwise use current src
+            const fullSrc = this.getAttribute('data-full-src') || this.src;
+            modalImg.src = fullSrc;
             modalImg.alt = this.alt;
             modalCaption.textContent = this.alt;
         });

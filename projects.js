@@ -7,7 +7,7 @@ const projects = [
         dateStart: "August, 2025",
         shortDescription: "A game where you lasso sheep and then feed them to the cthulhu in your backyard. Built in Unity in 4 days for the GMTK 2025 game jam.",
         video: "videos/Sheep_Trailer_Compressed.mp4",
-        posterImage: "images/sheep/SheepPosterCompressed.webp"
+        posterImage: "images/sheep/SheepPoster-small.webp"
     },
     {
         id: "northwoods",
