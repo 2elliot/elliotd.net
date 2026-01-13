@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         projectContent.innerHTML = `
             <div class="project-header">
-                <h1>Project Not Found</h1>
+                <h1>Oops, something went wrong!</h1>
             </div>
             <div class="project-blog-content">
-                <p>Sorry, the project you're looking for doesn't exist.</p>
+                <p>This isn't the page you're looking for 👋</p>
             </div>
         `;
     }
