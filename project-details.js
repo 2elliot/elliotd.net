@@ -47,7 +47,7 @@ const projectDetails = {
                 <a href="https://www.youtube.com/watch?v=d67YrHbhKMY" target="_blank" class="project-button secondary">View trailer</a>
                 <a href="https://github.com/fractalogpc/astoria" target="_blank" class="project-button secondary">View source</a>
             </p>
-
+ 
             <p>This page is under construction. Check back soon for a full post mortem on the development of Northwoods!</p>
         `
     },
