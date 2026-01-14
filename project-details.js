@@ -40,15 +40,42 @@ const projectDetails = {
     "northwoods": {
         title: "Northwoods",
         content: `
-            <img src="images/northwoods/NorthwoodsPoster.png" alt="Northwoods poster" class="blog-image">
+            <img src="images/northwoods/NorthwoodsPoster-small.webp" data-full-src="images/northwoods/NorthwoodsPoster.png" alt="Northwoods poster" class="blog-image full">
 
             <p>
                 <a href="https://tms.ogpc.info/Games/Details/1b7379ac-c1a0-42f4-8198-cd94d069b991" target="_blank" class="project-button">View official page</a>
                 <a href="https://www.youtube.com/watch?v=d67YrHbhKMY" target="_blank" class="project-button secondary">View trailer</a>
                 <a href="https://github.com/fractalogpc/astoria" target="_blank" class="project-button secondary">View source</a>
             </p>
- 
-            <p>This page is under construction. Check back soon for a full post mortem on the development of Northwoods!</p>
+
+            <h2>Overview</h2>
+            <img src="images/northwoods/OGPCLogo-small.webp" data-full-src="images/northwoods/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
+            <p><i>Northwoods</i> was created for the <a href="https://www.ogpc.info/" target="_blank">Oregon Game Project Challenge (OGPC)</a>, Oregon’s statewide game development competition. Unlike most game jams, OGPC runs over the course of roughly nine months and is judged by a panel of industry professionals across multiple disciplines.</p>
+            <p>I worked on this project with my team <a href="https://linktr.ee/fractaldev" target="_blank">Fractal Development</a>. This was our final year competing together, as most of my teammates were graduating, and we treated this project as a culmination of everything we had learned in previous competitions.</p>
+            <p>The theme for this year was <i>Extreme Weather</i>. We interpreted this not just as environmental hazards, but as a world fundamentally shaped and destabilized by weather-driven anomalies.</p>
+
+            <h2>Planning</h2>
+            <img src="images/northwoods/NorthwoodsMiroPlanning-small.webp" data-full-src="images/northwoods/NorthwoodsMiroPlanning.png" alt="Northwoods planning in Miro" class="blog-image large">
+            <p>As with our other projects, we began planning in <a href="https://miro.com" target="_blank">Miro</a>, rapidly pitching and refining ideas. Early concepts included flying drones through tornadoes, sailing across tsunamis, and parkouring through storm-ravaged cities at night.</p>
+            <p>In the previous year’s competition, we attempted a fully open-world procedurally generated game and ultimately ran out of time. Going into Northwoods, we made a conscious decision to revisit the open-world concept but cut procedural generation in favor of a handcrafted environment.</p>
+            <p>We chose to set the game in the Mt. Saint Helens region, imagining an alternate history where the mountain never erupted. Instead, it became the source of strange anomalies—violent weather patterns and hostile creatures—that transformed the surrounding wilderness.</p>
+
+            <h2>Development</h2>
+            <img src="images/northwoods/NorthwoodsWorld-small.webp" data-full-src="images/northwoods/NorthwoodsWorld.png" alt="Northwoods environment" class="blog-image large">
+            <p>World building began early and remained a major focus throughout development. While my teammates focused on terrain and environmental design using <a href="https://quadspinner.com/" target="_blank">QuadSpinner Gaea</a>, I primarily worked on gameplay systems and player interaction.</p>
+
+            <img src="images/northwoods/NorthwoodsPlayerController-small.webp" data-full-src="images/northwoods/NorthwoodsPlayerController.png" alt="Player controller and traversal" class="blog-image medium">
+            <p>I developed the player controller and core interaction systems, ensuring movement and traversal felt responsive in a large outdoor environment. Because extreme weather was central to the experience, the player needed to feel vulnerable while still capable of adapting to the world.</p>
+
+            <img src="images/northwoods/NorthwoodsBuilding-small.webp" data-full-src="images/northwoods/NorthwoodsBuilding.png" alt="Building system" class="blog-image large">
+            <p>The primary system I worked on was the building mechanic. We wanted players to construct shelters to survive severe weather, using materials gathered from the environment and defeated enemies. This system went through many iterations over the course of development.</p>
+            <p>The final design allows players to place predefined structural tiles—such as square or triangular foundations, walls, and sloped roofs—that snap together intuitively. Each placed object is registered in a shared data structure that tracks connections between pieces. This enabled simulated structural stability, where destroying one component can cause dependent structures to collapse naturally.</p>
+            <p>This approach balanced creative freedom with technical constraints, making construction approachable while still feeling grounded and reactive.</p>
+
+            <h2>Results</h2>
+            <img src="images/northwoods/NorthwoodsAwards-small.webp" data-full-src="images/northwoods/NorthwoodsAwards.png" alt="OGPC awards" class="blog-image medium">
+            <p>Northwoods was extremely well received. The game won <b>Best in Show</b>, awarded by the judging panel, and was also voted <b>Players’ Choice</b> by other competitors and spectators.</p>
+            <p>For me, this project represents a clear improvement over our previous year’s entry. It was an opportunity to apply hard-earned lessons about scope, iteration, and system design, and to finish our final competition together with a project we were all proud of.</p>
         `
     },
     "heavyville": {

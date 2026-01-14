@@ -16,7 +16,7 @@ const projects = [
         dateEnd: "2025",
         shortDescription: "A open-world survival game set in the Mt. St. Helens region. Scavenge for resources, build shelter, and survive the wilderness. Built in Unity for our 2025 state competition.",
         video: "videos/Northwoods_Trailer_Condensed_Compressed.mp4",
-        posterImage: "images/northwoods/NorthwoodsPosterCompressed.webp"
+        posterImage: "images/northwoods/NorthwoodsPoster-small.webp"
     },
     {
         id: "heavyville",
