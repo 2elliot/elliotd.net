@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const project = projectDetails[projectId];
         
         // Update page title
-        document.title = `${project.title} - Your Name`;
+        document.title = `${project.title} - Elliot D'Alessandro`;
         
         // Update Open Graph tags for social sharing
         updateMetaTags(project.title, projectId);
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         projectContent.innerHTML = `
             <div class="project-header">
-                <h1>Project Not Found</h1>
+                <h1>Oops! Something went wrong.</h1>
             </div>
             <div class="project-blog-content">
-                <p>Sorry, the project you're looking for doesn't exist.</p>
+                <p>This isn't the page you're looking for 👋</p>
             </div>
         `;
     }
@@ -96,9 +96,9 @@ function setupImageModal() {
 
 // Update meta tags for social sharing
 function updateMetaTags(projectTitle, projectId) {
-    const description = `Check out ${projectTitle} - a project by Your Name`;
-    const url = `https://yourdomain.com/project.html?id=${projectId}`;
-    const image = `https://yourdomain.com/images/${projectId}-preview.jpg`;
+    const description = `Check out ${projectTitle} - a project by Elliot D'Alessandro`;
+    const url = `https://elliotd.net/project.html?id=${projectId}`;
+    const image = `https://elliotd.net/images/${projectId}-preview.jpg`;
     
     // Update or create Open Graph tags
     updateMetaTag('og:title', projectTitle);
