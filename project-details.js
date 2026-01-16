@@ -121,7 +121,7 @@ const projectDetails = {
     "nocte": {
         title: "Nocte",
         content: `
-            <img src="images/nocte/NoctePoster.png" alt="Nocte poster" class="blog-image">
+            <img src="images/nocte/NoctePoster-small.webp" data-full-src="images/nocte/NoctePoster.png" alt="Nocte poster" class="blog-image">
 
             <p>
                 <a href="https://tms.ogpc.info/Games/Details/cd7fde0e-bea4-4f2e-9692-9df177798a7a" target="_blank" class="project-button">View official page</a>
@@ -130,13 +130,13 @@ const projectDetails = {
             </p>
 
             <h2>Overview</h2>
-            <img src="images/nocte/OGPCLogo-small.webp" data-full-src="images/nocte/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
+            <img src="images/general/OGPCLogo-small.webp" data-full-src="images/general/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
             <p><i>Nocte</i> was created for the <a href="https://ogpc.info" target="_blank">Oregon Game Project Challenge (OGPC)</a>, Oregon’s statewide game development competition. The competition spans several months and is judged by industry professionals across design, art, and technical execution.</p>
             <p>I worked on this project with my team <a href="https://linktr.ee/fractaldev" target="_blank">Fractal Development</a>. Coming off previous successes, we were ambitious and chose to pursue a technically complex idea centered around procedural generation.</p>
             <p>The theme for this year was <i>Cycles</i>. We interpreted this as a narrative and mechanical loop: repeatedly launching down to a hostile planet, dying, upgrading yourself, and trying again.</p>
 
             <h2>Planning</h2>
-            <img src="images/nocte/NocteMiro-small.webp" data-full-src="images/nocte/NocteMiro.png" alt="Nocte planning in Miro" class="blog-image large">
+            <img src="images/nocte/NocteMiroPlanning-small.webp" data-full-src="images/nocte/NocteMiroPlanning  .png" alt="Nocte planning in Miro" class="blog-image large">
             <p>Early planning focused on building a large, procedurally generated world designed for exploration. Our goal was a roguelike experience where each run felt different, but still supported meaningful progression and storytelling.</p>
             <p>In hindsight, we were overconfident in our ability to deliver such a broad scope within the competition timeline. We underestimated how much additional complexity procedural generation introduces, especially when layered with narrative systems, upgrades, and progression.</p>
             <p>Despite this, we committed to the idea and focused on building flexible systems that could adapt to dynamically generated content.</p>
@@ -145,7 +145,7 @@ const projectDetails = {
             <img src="images/nocte/NocteWorld-small.webp" data-full-src="images/nocte/NocteWorld.png" alt="Procedurally generated world" class="blog-image large">
             <p>A significant portion of development was spent on procedural generation and ensuring that gameplay systems could function reliably in an unpredictable environment. This required careful separation between authored content and generated structure.</p>
 
-            <img src="images/nocte/NoctePlayer-small.webp" data-full-src="images/nocte/NoctePlayer.png" alt="Player controller" class="blog-image medium">
+            <img src="images/nocte/NoctePlayerController-small.webp" data-full-src="images/nocte/NoctePlayerController.png" alt="Player controller" class="blog-image medium">
             <p>I worked primarily on the player controller and the upgrade system. The upgrade system allowed players to permanently improve their abilities between runs, reinforcing the core cycle of failure, learning, and progression.</p>
 
             <img src="images/nocte/NocteUpgrades-small.webp" data-full-src="images/nocte/NocteUpgrades.png" alt="Upgrade system" class="blog-image medium">
@@ -154,11 +154,11 @@ const projectDetails = {
             <img src="images/nocte/NocteVFX-small.webp" data-full-src="images/nocte/NocteVFX.png" alt="Visual effects" class="blog-image medium">
             <p>I also created visual effects to support combat, traversal, and environmental feedback, helping players read moment-to-moment gameplay despite the procedural nature of the world.</p>
 
-            <img src="images/nocte/NocteStory-small.webp" data-full-src="images/nocte/NocteStory.png" alt="Story and dialogue" class="blog-image large">
+            <img src="images/nocte/NocteDialogue-small.webp" data-full-src="images/nocte/NocteDialogue.png" alt="Story and dialogue" class="blog-image small">
             <p>In parallel with system development, we invested heavily in narrative. We wrote extensive story content and recorded voice acting to give context and emotional weight to the repeated cycle of descent and death.</p>
 
             <h2>Results</h2>
-            <img src="images/nocte/NocteAwards-small.webp" data-full-src="images/nocte/NocteAwards.png" alt="OGPC Best Game Design award" class="blog-image medium">
+            <img src="images/nocte/NocteFinalImage-small.webp" data-full-src="images/nocte/NocteFinalImage.png" alt="OGPC Best Game Design award" class="blog-image medium">
             <p>While Nocte ultimately fell short of our original scope, it was an invaluable learning experience. The project revealed the real cost of procedural systems and reinforced the importance of scope control.</p>
             <p>The game received the <b>Best Game Design</b> award, largely due to its narrative depth and thematic cohesion. For our team, Nocte became a turning point—directly influencing how we approached scope, iteration, and technical ambition in later projects.</p>
         
