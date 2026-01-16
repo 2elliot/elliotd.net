@@ -1,5 +1,3 @@
-// Detailed project information
-// Add full descriptions, links, screenshots, and technologies for each project
 const projectDetails = {
     "sheep": {
         title: "On the Lamb!",
@@ -12,7 +10,7 @@ const projectDetails = {
             </p>
             
             <h2>Overview</h2>
-            <img src="images/sheep/GMTKLogo-small.webp" data-full-src="images/sheep/GMTKLogo.png" alt="GMTK Game Jam 2025" class="blog-image small">
+            <img src="images/general/GMTKLogo-small.webp" data-full-src="images/general/GMTKLogo.png" alt="GMTK Game Jam 2025" class="blog-image small">
             <p>This game was made for the <a href="https://itch.io/jam/gmtk-2025" target="_blank">2025 GMTK Game Jam</a>, a game making competition hosted by the Youtuber <a href=https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw" target="_blank">Game Maker's Toolkit</a>. The GMTK Game Jam is an annual game making marathon, where individuals and teams try to make a game that fits a theme, in only 4 days.</p>
             <p>This year I competed with my team <a href="https://linktr.ee/fractaldev" target="_blank">Fractal Development</a>. We have competed in several game jams together, including previous GMTK jams, and state competitions.</p>
             <p>The theme for the 2025 competition was <i>Loop</i>. Competitors are able to use pre-existing code or assets, but shouldn't make stuff ahead of time specifically for this competition.</p>
@@ -34,7 +32,7 @@ const projectDetails = {
             <img src="images/sheep/SheepMonster-small.webp" data-full-src="images/sheep/SheepMonster.png" alt="Cthulhu monster" class="blog-image large">
 
             <h2>Results</h2>
-            <p>In the end, we were able to complete and submit the game just before the deadline. We were extremely happy with how it turned out, especially considering the short time frame. The game was well received, and out of nearly 10,000 entries we placed in the top 4%. Overall, it was a fantastic experience and we learned a lot about rapid game development and teamwork.</p>
+            <p>In the end, we were able to complete and submit the game just before the deadline. We were extremely happy with how it turned out, especially considering the short time frame. The game was well received, and out of nearly 10,000 entries we placed in the <b>top 4%</b>. Overall, it was a fantastic experience and we learned a lot about rapid game development and teamwork.</p>
 
             <button class="project-button secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Return to top of page</button>
         `,
@@ -51,7 +49,7 @@ const projectDetails = {
             </p>
 
             <h2>Overview</h2>
-            <img src="images/northwoods/OGPCLogo-small.webp" data-full-src="images/northwoods/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
+            <img src="images/general/OGPCLogo-small.webp" data-full-src="images/general/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
             <p><i>Northwoods</i> was created for the <a href="https://www.ogpc.info/" target="_blank">Oregon Game Project Challenge (OGPC)</a>, Oregon's statewide game development competition. Unlike most game jams, OGPC runs over the course of roughly nine months and is judged by a panel of industry professionals across multiple disciplines.</p>
             <p>I worked on this project with my team <a href="https://linktr.ee/fractaldev" target="_blank">Fractal Development</a>. This was our final year competing together, as the rest of our teammates were graduating, and we treated this project as the final a culmination of everything we had learned in previous competitions.</p>
             <p>The theme for this year was <i>Extreme Weather</i>. Unlike other jams, OGPC tends to emphasize more general themes that allow for broad interpretation.</p>
@@ -86,37 +84,36 @@ const projectDetails = {
     "heavyville": {
         title: "Heavyville",
         content: `
-            <img src="images/heavyville/HeavyvillePoster.png" alt="Heavyville poster" class="blog-image">
+            <img src="images/heavyville/HeavyvillePoster-small.webp" data-full-src="images/heavyville/HeavyvillePoster.png" alt="Heavyville poster" class="blog-image">
 
             <p>
                 <a href="https://fractaldev.itch.io/heavyville" target="_blank" class="project-button">View official page</a>
             </p>
 
             <h2>Overview</h2>
-            <img src="images/heavyville/GMTKLogo-small.webp" data-full-src="images/heavyville/GMTKLogo.png" alt="GMTK Game Jam" class="blog-image small">
-            <p><i>Heavyville</i> was created for the <a href="https://itch.io/jam/gmtk-2024" target="_blank">GMTK Game Jam</a>, an annual game development competition hosted by the YouTube channel <a href="https://www.youtube.com/c/GameMakersToolkit" target="_blank">Game Maker’s Toolkit</a>. The jam challenges developers to create a complete game in just four days based on a central theme.</p>
+            <img src="images/general/GMTKLogo-small.webp" data-full-src="images/general/GMTKLogo.png" alt="GMTK Game Jam" class="blog-image small">
+            <p>This game was made for the <a href="https://itch.io/jam/gmtk-2024" target="_blank">2024 GMTK Game Jam</a>, a game making competition hosted by the Youtuber <a href=https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw" target="_blank">Game Maker's Toolkit</a>. The GMTK Game Jam is an annual game making marathon, where individuals and teams try to make a game that fits a theme, in only 4 days.</p>
             <p>This was the first time I competed in the GMTK Game Jam, and also the first time my team worked within such a short development window.</p>
-            <p>The theme for this year was <i>Built to Scale</i>. We interpreted this literally, building a game centered around weighing objects and making decisions based on their mass.</p>
+            <p>The theme for this year was <i>Built to Scale</i>. Competitors are able to use pre-existing code or assets, but shouldn't make stuff ahead of time specifically for this competition.</p>
 
             <h2>Planning</h2>
             <img src="images/heavyville/HeavyvilleMiro-small.webp" data-full-src="images/heavyville/HeavyvilleMiro.png" alt="Heavyville planning in Miro" class="blog-image large">
-            <p>We began planning by rapidly brainstorming interpretations of the theme. Given the time constraint, we focused on ideas that were mechanically simple but flexible enough to expand.</p>
-            <p>We ultimately chose a 2D game about weighing objects on a scale. This was a deliberate risk—none of us had made a 2D game together before—but the reduced visual complexity allowed us to focus on core systems and moment-to-moment gameplay.</p>
+            <p>We began planning by rapidly brainstorming interpretations of the theme. We had ideas of characters that could grow and shrink, managing ants to build structures, or even running a website with increasing amount of traffic over time.</p>
+            <p>We ultimately chose a 2D game about weighing objects on a scale. This was a bit of a risk, none of us had made a 2D game before and we would be learning new things, however the reduced visual complexity allowed us to focus on core systems and moment-to-moment gameplay.</p>
 
             <h2>Development</h2>
-            <img src="images/heavyville/HeavyvilleScale-small.webp" data-full-src="images/heavyville/HeavyvilleScale.png" alt="Scale mechanic" class="blog-image medium">
-            <p>I served as the lead programmer on Heavyville and implemented the majority of the game’s systems. A major focus was the scale itself, including the physics and logic needed to accurately compare object weights in a way that felt intuitive to the player.</p>
+            <img src="images/heavyville/HeavyvilleGameplay-small.webp" data-full-src="images/heavyville/HeavyvilleGameplay.png" alt="Scale mechanic" class="blog-image medium">
+            <p>I served as the lead programmer on Heavyville and implemented the majority of the game's systems. I built the scale, including simulating the physics. During development, we ran into an interesting problem where players didn't understand what a scale should do, especially with being able to slide the scale horizontally, so we took steps to simplifying the scaling process.</p>
 
-            <img src="images/heavyville/HeavyvilleObjects-small.webp" data-full-src="images/heavyville/HeavyvilleObjects.png" alt="Object system" class="blog-image medium">
+            <img src="images/heavyville/HeavyvilleMiroObjects-small.webp" data-full-src="images/heavyville/HeavyvilleMiroObjects.png" alt="Character items planning" class="blog-image large">
             <p>I also designed an object-driven system that allowed us to easily add new items, characters, dialogue, and daily progression. This structure made it possible to expand content quickly during the jam without rewriting core logic.</p>
 
-            <img src="images/heavyville/HeavyvilleDialogue-small.webp" data-full-src="images/heavyville/HeavyvilleDialogue.png" alt="Dialogue and characters" class="blog-image medium">
-            <p>Because this was our first 2D project, we spent time iterating on interaction and readability, ensuring players could clearly understand cause-and-effect when placing objects on the scale.</p>
+            <img src="images/heavyville/HeavyvilleShop-small.webp" data-full-src="images/heavyville/HeavyvilleShop.png" alt="Shop menu" class="blog-image medium">
+            <p>Because this was our first 2D project, we spent time figuring out how to navigate the UI and interactions to ensuring players could clearly understand cause-and-effect when placing objects on the scale.</p>
 
             <h2>Results</h2>
-            <img src="images/heavyville/HeavyvilleResults-small.webp" data-full-src="images/heavyville/HeavyvilleResults.png" alt="Heavyville results" class="blog-image medium">
             <p>Despite the challenges of the short timeline and unfamiliar format, we successfully completed and submitted the game before the deadline.</p>
-            <p>Out of more than 7,500 entries, Heavyville placed in the <b>top 7%</b>. For me, this project was a valuable introduction to rapid game development and set the foundation for future competitions and more ambitious projects.</p>
+            <p>Out of more than 7,500 entries, Heavyville placed in the <b>top 7%</b>. For me, this project was valuable as an introduction to building games in such a short amount of time and set the foundation for future competitions and more ambitious projects.</p>
         
             <button class="project-button secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Return to top of page</button>
         `
@@ -180,7 +177,7 @@ const projectDetails = {
 
             <h2>Overview</h2>
             <img src="images/symbiont/OGPCLogo-small.webp" data-full-src="images/symbiont/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
-            <p><i>Symbiont</i> was our team’s first game project and our first entry into the <a href="https://tms.ogpc.info" target="_blank">Oregon Game Project Challenge (OGPC)</a>. At the time, none of us had made a complete game before, and this project served as our introduction to game development as a whole.</p>
+            <p><i>Symbiont</i> was our team's first game project and our first entry into the <a href="https://tms.ogpc.info" target="_blank">Oregon Game Project Challenge (OGPC)</a>. At the time, none of us had made a complete game before, and this project served as our introduction to game development as a whole.</p>
             <p>Unlike later years, we started the competition late and had only about three months to work instead of the usual nine. Much of that time was spent learning tools, workflows, and foundational skills rather than polishing content.</p>
             <p>The theme for this year was <i>Breaking Conventions</i>. We interpreted this as challenging traditional assumptions about familiar genres.</p>
 

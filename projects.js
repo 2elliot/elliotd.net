@@ -24,7 +24,7 @@ const projects = [
         dateStart: "August, 2024",
         shortDescription: "A simple physics puzzle game where you weight your client's items. Built in Unity in 4 days for the GMTK 2024 game jam.",
         video: "videos/Heavyville_Trailer_Compressed.mp4",
-        posterImage: "images/heavyville/HeavyvillePosterCompressed.webp"
+        posterImage: "images/heavyville/HeavyvillePoster-small.webp"
     },
     {
         id: "nocte",
