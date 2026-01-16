@@ -61,4 +61,26 @@ document.addEventListener('DOMContentLoaded', function () {
             }, index * 100);
         });
     });
+
+    restoreScrollPosition();
 });
+
+function restoreScrollPosition() {
+    // Check if we have a saved scroll position for this page
+    const savedPosition = sessionStorage.getItem('indexScrollPosition');
+    
+    if (savedPosition !== null) {
+        // Restore the scroll position
+        window.scrollTo(0, parseInt(savedPosition));
+    }
+    
+    // Save scroll position whenever user scrolls
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        // Debounce to avoid saving too frequently
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            sessionStorage.setItem('indexScrollPosition', window.scrollY);
+        }, 100);
+    });
+}

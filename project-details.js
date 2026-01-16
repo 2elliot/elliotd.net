@@ -35,6 +35,8 @@ const projectDetails = {
 
             <h2>Results</h2>
             <p>In the end, we were able to complete and submit the game just before the deadline. We were extremely happy with how it turned out, especially considering the short time frame. The game was well received, and out of nearly 10,000 entries we placed in the top 4%. Overall, it was a fantastic experience and we learned a lot about rapid game development and teamwork.</p>
+
+            <button class="project-button secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Return to top of page</button>
         `,
     },
     "northwoods": {
@@ -50,32 +52,35 @@ const projectDetails = {
 
             <h2>Overview</h2>
             <img src="images/northwoods/OGPCLogo-small.webp" data-full-src="images/northwoods/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
-            <p><i>Northwoods</i> was created for the <a href="https://www.ogpc.info/" target="_blank">Oregon Game Project Challenge (OGPC)</a>, Oregon’s statewide game development competition. Unlike most game jams, OGPC runs over the course of roughly nine months and is judged by a panel of industry professionals across multiple disciplines.</p>
-            <p>I worked on this project with my team <a href="https://linktr.ee/fractaldev" target="_blank">Fractal Development</a>. This was our final year competing together, as most of my teammates were graduating, and we treated this project as a culmination of everything we had learned in previous competitions.</p>
-            <p>The theme for this year was <i>Extreme Weather</i>. We interpreted this not just as environmental hazards, but as a world fundamentally shaped and destabilized by weather-driven anomalies.</p>
+            <p><i>Northwoods</i> was created for the <a href="https://www.ogpc.info/" target="_blank">Oregon Game Project Challenge (OGPC)</a>, Oregon's statewide game development competition. Unlike most game jams, OGPC runs over the course of roughly nine months and is judged by a panel of industry professionals across multiple disciplines.</p>
+            <p>I worked on this project with my team <a href="https://linktr.ee/fractaldev" target="_blank">Fractal Development</a>. This was our final year competing together, as the rest of our teammates were graduating, and we treated this project as the final a culmination of everything we had learned in previous competitions.</p>
+            <p>The theme for this year was <i>Extreme Weather</i>. Unlike other jams, OGPC tends to emphasize more general themes that allow for broad interpretation.</p>
 
             <h2>Planning</h2>
             <img src="images/northwoods/NorthwoodsMiroPlanning-small.webp" data-full-src="images/northwoods/NorthwoodsMiroPlanning.png" alt="Northwoods planning in Miro" class="blog-image large">
-            <p>As with our other projects, we began planning in <a href="https://miro.com" target="_blank">Miro</a>, rapidly pitching and refining ideas. Early concepts included flying drones through tornadoes, sailing across tsunamis, and parkouring through storm-ravaged cities at night.</p>
-            <p>In the previous year’s competition, we attempted a fully open-world procedurally generated game and ultimately ran out of time. Going into Northwoods, we made a conscious decision to revisit the open-world concept but cut procedural generation in favor of a handcrafted environment.</p>
-            <p>We chose to set the game in the Mt. Saint Helens region, imagining an alternate history where the mountain never erupted. Instead, it became the source of strange anomalies—violent weather patterns and hostile creatures—that transformed the surrounding wilderness.</p>
+            <p>As with our other projects, we began planning in <a href="https://miro.com" target="_blank">Miro</a>, quickly pitching ideas and not being afraid to throw them out. Our early ideas  included flying drones through tornadoes, sailing across tsunamis, and parkouring through storm-ravaged cities at night.</p>
+            <p>Because this competition was much longer than typical game jams, we had the opportunity to prototype multiple ideas before settling on one. After several rounds of iteration, we landed on an open-world survival game set in a wilderness environment affected by extreme weather.</p>
+            <p>In the previous year's competition, we attempted a fully open-world procedurally generated game and ultimately ran out of time. Going into Northwoods, we made a conscious decision to revisit the open-world concept but cut procedural generation in favor of a handcrafted environment.</p>
+            <p>We chose to set the game in the Mt. Saint Helens region, imagining an alternate history where the mountain never erupted. Instead, it became the source of strange anomalies where violent weather patterns and hostile creatures transformed the surrounding wilderness.</p>
 
             <h2>Development</h2>
             <img src="images/northwoods/NorthwoodsWorld-small.webp" data-full-src="images/northwoods/NorthwoodsWorld.png" alt="Northwoods environment" class="blog-image large">
             <p>World building began early and remained a major focus throughout development. While my teammates focused on terrain and environmental design using <a href="https://quadspinner.com/" target="_blank">QuadSpinner Gaea</a>, I primarily worked on gameplay systems and player interaction.</p>
 
             <img src="images/northwoods/NorthwoodsPlayerController-small.webp" data-full-src="images/northwoods/NorthwoodsPlayerController.png" alt="Player controller and traversal" class="blog-image medium">
-            <p>I developed the player controller and core interaction systems, ensuring movement and traversal felt responsive in a large outdoor environment. Because extreme weather was central to the experience, the player needed to feel vulnerable while still capable of adapting to the world.</p>
+            <p>I worked on the player controller and core systems, ensuring that we could easily add and iterate on features as our game grew. Because the player controller is how players interact with the world, it was crucial to get this right early on so we could run playtests and get feedback.</p>
 
             <img src="images/northwoods/NorthwoodsBuilding-small.webp" data-full-src="images/northwoods/NorthwoodsBuilding.png" alt="Building system" class="blog-image large">
             <p>The primary system I worked on was the building mechanic. We wanted players to construct shelters to survive severe weather, using materials gathered from the environment and defeated enemies. This system went through many iterations over the course of development.</p>
-            <p>The final design allows players to place predefined structural tiles—such as square or triangular foundations, walls, and sloped roofs—that snap together intuitively. Each placed object is registered in a shared data structure that tracks connections between pieces. This enabled simulated structural stability, where destroying one component can cause dependent structures to collapse naturally.</p>
-            <p>This approach balanced creative freedom with technical constraints, making construction approachable while still feeling grounded and reactive.</p>
+            <p>The final design allows players to place predefined structural tiles such as square or triangular foundations, walls, and sloped roofs—that snap together intuitively. Each placed object is registered in a data structure that tracks connections between pieces. This enabled simulated structural stability, where destroying one component can cause dependent structures to collapse naturally.</p>
+            <p>Then, the player can edit these tiles to replace them with objects of similar shape but different functionality such as windows, doors, or roof tiles. This allows for creative freedom while ensuring that construction remains manageable and grounded.</p>
 
             <h2>Results</h2>
             <img src="images/northwoods/NorthwoodsAwards-small.webp" data-full-src="images/northwoods/NorthwoodsAwards.png" alt="OGPC awards" class="blog-image medium">
-            <p>Northwoods was extremely well received. The game won <b>Best in Show</b>, awarded by the judging panel, and was also voted <b>Players’ Choice</b> by other competitors and spectators.</p>
-            <p>For me, this project represents a clear improvement over our previous year’s entry. It was an opportunity to apply hard-earned lessons about scope, iteration, and system design, and to finish our final competition together with a project we were all proud of.</p>
+            <p>Northwoods was extremely well received. The game won <b>Best in Show</b>, awarded by the judging panel, and was also voted <b>Players' Choice</b> by other competitors and spectators.</p>
+            <p>For me, this project represents how much our team grew over the three years we made games together. It was an opportunity to try out our ideas we've had for years and apply everything we'd learned to make something we were proud of.</p>
+
+            <button class="project-button secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Return to top of page</button>
         `
     },
     "heavyville": {
@@ -87,7 +92,33 @@ const projectDetails = {
                 <a href="https://fractaldev.itch.io/heavyville" target="_blank" class="project-button">View official page</a>
             </p>
 
-            <p>This page is under construction. Check back soon for a full post mortem on the development of Heavyville!</p>
+            <h2>Overview</h2>
+            <img src="images/heavyville/GMTKLogo-small.webp" data-full-src="images/heavyville/GMTKLogo.png" alt="GMTK Game Jam" class="blog-image small">
+            <p><i>Heavyville</i> was created for the <a href="https://itch.io/jam/gmtk-2024" target="_blank">GMTK Game Jam</a>, an annual game development competition hosted by the YouTube channel <a href="https://www.youtube.com/c/GameMakersToolkit" target="_blank">Game Maker’s Toolkit</a>. The jam challenges developers to create a complete game in just four days based on a central theme.</p>
+            <p>This was the first time I competed in the GMTK Game Jam, and also the first time my team worked within such a short development window.</p>
+            <p>The theme for this year was <i>Built to Scale</i>. We interpreted this literally, building a game centered around weighing objects and making decisions based on their mass.</p>
+
+            <h2>Planning</h2>
+            <img src="images/heavyville/HeavyvilleMiro-small.webp" data-full-src="images/heavyville/HeavyvilleMiro.png" alt="Heavyville planning in Miro" class="blog-image large">
+            <p>We began planning by rapidly brainstorming interpretations of the theme. Given the time constraint, we focused on ideas that were mechanically simple but flexible enough to expand.</p>
+            <p>We ultimately chose a 2D game about weighing objects on a scale. This was a deliberate risk—none of us had made a 2D game together before—but the reduced visual complexity allowed us to focus on core systems and moment-to-moment gameplay.</p>
+
+            <h2>Development</h2>
+            <img src="images/heavyville/HeavyvilleScale-small.webp" data-full-src="images/heavyville/HeavyvilleScale.png" alt="Scale mechanic" class="blog-image medium">
+            <p>I served as the lead programmer on Heavyville and implemented the majority of the game’s systems. A major focus was the scale itself, including the physics and logic needed to accurately compare object weights in a way that felt intuitive to the player.</p>
+
+            <img src="images/heavyville/HeavyvilleObjects-small.webp" data-full-src="images/heavyville/HeavyvilleObjects.png" alt="Object system" class="blog-image medium">
+            <p>I also designed an object-driven system that allowed us to easily add new items, characters, dialogue, and daily progression. This structure made it possible to expand content quickly during the jam without rewriting core logic.</p>
+
+            <img src="images/heavyville/HeavyvilleDialogue-small.webp" data-full-src="images/heavyville/HeavyvilleDialogue.png" alt="Dialogue and characters" class="blog-image medium">
+            <p>Because this was our first 2D project, we spent time iterating on interaction and readability, ensuring players could clearly understand cause-and-effect when placing objects on the scale.</p>
+
+            <h2>Results</h2>
+            <img src="images/heavyville/HeavyvilleResults-small.webp" data-full-src="images/heavyville/HeavyvilleResults.png" alt="Heavyville results" class="blog-image medium">
+            <p>Despite the challenges of the short timeline and unfamiliar format, we successfully completed and submitted the game before the deadline.</p>
+            <p>Out of more than 7,500 entries, Heavyville placed in the <b>top 7%</b>. For me, this project was a valuable introduction to rapid game development and set the foundation for future competitions and more ambitious projects.</p>
+        
+            <button class="project-button secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Return to top of page</button>
         `
     },
     "nocte": {
@@ -101,7 +132,40 @@ const projectDetails = {
                 <a href="https://github.com/DoomKitty87/nocte-game" target="_blank" class="project-button secondary">View source</a>
             </p>
 
-            <p>This page is under construction. Check back soon for a full post mortem on the development of Nocte!</p>
+            <h2>Overview</h2>
+            <img src="images/nocte/OGPCLogo-small.webp" data-full-src="images/nocte/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
+            <p><i>Nocte</i> was created for the <a href="https://ogpc.info" target="_blank">Oregon Game Project Challenge (OGPC)</a>, Oregon’s statewide game development competition. The competition spans several months and is judged by industry professionals across design, art, and technical execution.</p>
+            <p>I worked on this project with my team <a href="https://linktr.ee/fractaldev" target="_blank">Fractal Development</a>. Coming off previous successes, we were ambitious and chose to pursue a technically complex idea centered around procedural generation.</p>
+            <p>The theme for this year was <i>Cycles</i>. We interpreted this as a narrative and mechanical loop: repeatedly launching down to a hostile planet, dying, upgrading yourself, and trying again.</p>
+
+            <h2>Planning</h2>
+            <img src="images/nocte/NocteMiro-small.webp" data-full-src="images/nocte/NocteMiro.png" alt="Nocte planning in Miro" class="blog-image large">
+            <p>Early planning focused on building a large, procedurally generated world designed for exploration. Our goal was a roguelike experience where each run felt different, but still supported meaningful progression and storytelling.</p>
+            <p>In hindsight, we were overconfident in our ability to deliver such a broad scope within the competition timeline. We underestimated how much additional complexity procedural generation introduces, especially when layered with narrative systems, upgrades, and progression.</p>
+            <p>Despite this, we committed to the idea and focused on building flexible systems that could adapt to dynamically generated content.</p>
+
+            <h2>Development</h2>
+            <img src="images/nocte/NocteWorld-small.webp" data-full-src="images/nocte/NocteWorld.png" alt="Procedurally generated world" class="blog-image large">
+            <p>A significant portion of development was spent on procedural generation and ensuring that gameplay systems could function reliably in an unpredictable environment. This required careful separation between authored content and generated structure.</p>
+
+            <img src="images/nocte/NoctePlayer-small.webp" data-full-src="images/nocte/NoctePlayer.png" alt="Player controller" class="blog-image medium">
+            <p>I worked primarily on the player controller and the upgrade system. The upgrade system allowed players to permanently improve their abilities between runs, reinforcing the core cycle of failure, learning, and progression.</p>
+
+            <img src="images/nocte/NocteUpgrades-small.webp" data-full-src="images/nocte/NocteUpgrades.png" alt="Upgrade system" class="blog-image medium">
+            <p>Because the world layout was not fixed, upgrades and progression systems had to be resilient to changing environments, which influenced how abilities were designed and balanced.</p>
+
+            <img src="images/nocte/NocteVFX-small.webp" data-full-src="images/nocte/NocteVFX.png" alt="Visual effects" class="blog-image medium">
+            <p>I also created visual effects to support combat, traversal, and environmental feedback, helping players read moment-to-moment gameplay despite the procedural nature of the world.</p>
+
+            <img src="images/nocte/NocteStory-small.webp" data-full-src="images/nocte/NocteStory.png" alt="Story and dialogue" class="blog-image large">
+            <p>In parallel with system development, we invested heavily in narrative. We wrote extensive story content and recorded voice acting to give context and emotional weight to the repeated cycle of descent and death.</p>
+
+            <h2>Results</h2>
+            <img src="images/nocte/NocteAwards-small.webp" data-full-src="images/nocte/NocteAwards.png" alt="OGPC Best Game Design award" class="blog-image medium">
+            <p>While Nocte ultimately fell short of our original scope, it was an invaluable learning experience. The project revealed the real cost of procedural systems and reinforced the importance of scope control.</p>
+            <p>The game received the <b>Best Game Design</b> award, largely due to its narrative depth and thematic cohesion. For our team, Nocte became a turning point—directly influencing how we approached scope, iteration, and technical ambition in later projects.</p>
+        
+            <button class="project-button secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Return to top of page</button>
         `
     },
     "symbiont": {
@@ -114,7 +178,34 @@ const projectDetails = {
                 <a href="https://github.com/DoomKitty87/symbiont-ogpc" target="_blank" class="project-button secondary">View source</a>
             </p>
 
-            <p>This page is under construction. Check back soon for a full post mortem on the development of Symbiont!</p>
+            <h2>Overview</h2>
+            <img src="images/symbiont/OGPCLogo-small.webp" data-full-src="images/symbiont/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
+            <p><i>Symbiont</i> was our team’s first game project and our first entry into the <a href="https://tms.ogpc.info" target="_blank">Oregon Game Project Challenge (OGPC)</a>. At the time, none of us had made a complete game before, and this project served as our introduction to game development as a whole.</p>
+            <p>Unlike later years, we started the competition late and had only about three months to work instead of the usual nine. Much of that time was spent learning tools, workflows, and foundational skills rather than polishing content.</p>
+            <p>The theme for this year was <i>Breaking Conventions</i>. We interpreted this as challenging traditional assumptions about familiar genres.</p>
+
+            <h2>Planning</h2>
+            <img src="images/symbiont/SymbiontPlanning-small.webp" data-full-src="images/symbiont/SymbiontPlanning.png" alt="Early Symbiont planning" class="blog-image large">
+            <p>The initial concept came from a challenge given by our computer science teacher: create a game that could be played using only three buttons. We wanted to push that constraint as far as possible.</p>
+            <p>We decided to make an on-rails shooter without traditional movement. Instead of navigating freely through space, the player teleports between enemies, taking control of them and using their abilities to progress through a series of rooms.</p>
+            <p>This approach allowed us to rethink the shooter genre while keeping input complexity extremely low.</p>
+
+            <h2>Development</h2>
+            <img src="images/symbiont/SymbiontGameplay-small.webp" data-full-src="images/symbiont/SymbiontGameplay.png" alt="Symbiont gameplay" class="blog-image large">
+            <p>Because this was our first game, development focused heavily on fundamentals: input handling, basic combat logic, state management, and scene transitions. With such a limited control scheme, every system needed to be clear and intentional.</p>
+
+            <img src="images/symbiont/SymbiontTeleport-small.webp" data-full-src="images/symbiont/SymbiontTeleport.png" alt="Teleport mechanic" class="blog-image medium">
+            <p>The core mechanic—teleporting between enemies and taking them over—formed the backbone of the game. This allowed us to create variety without adding complex controls or player movement.</p>
+
+            <img src="images/symbiont/SymbiontRooms-small.webp" data-full-src="images/symbiont/SymbiontRooms.png" alt="Room-based progression" class="blog-image medium">
+            <p>Due to time constraints and our focus on learning, the game does not feature a full narrative. Instead, we concentrated on building a complete, functional gameplay loop that demonstrated strong technical execution.</p>
+
+            <h2>Results</h2>
+            <img src="images/symbiont/SymbiontAwards-small.webp" data-full-src="images/symbiont/SymbiontAwards.png" alt="Best in Programming award" class="blog-image medium">
+            <p>Despite the limited development time and our lack of prior experience, Symbiont was awarded <b>Best in Programming</b> at the competition.</p>
+            <p>At this stage, our team consisted of three programmers, and this project laid the foundation for everything that followed. Symbiont marked the start of our growth as developers and set the direction for future projects focused on strong systems and unconventional design.</p>
+        
+            <button class="project-button secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Return to top of page</button>
         `
     },
 };
