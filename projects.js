@@ -33,7 +33,7 @@ const projects = [
         dateEnd: "2024",
         shortDescription: "A open-world procedurally generated roguelike where you explore a vast world. Built in Unity for our 2024 state competition.",
         video: "videos/Nocte_Trailer_Condensed_Compressed.mp4",
-        posterImage: "images/nocte/NoctePosterCompressed.webp"
+        posterImage: "images/nocte/NoctePoster-small.webp"
     },
     {
         id: "symbiont",
@@ -42,6 +42,6 @@ const projects = [
         dateEnd: "2023",
         shortDescription: "An on-rails shooter where you teleport between enemies and cameras and fight your way through randomized rooms. Built in Unity for our 2023 state competition.",
         video: "videos/Symbiont_Trailer_Condensed_Compressed.mp4",
-        posterImage: "images/symbiont/SymbiontPosterCompressed.webp"
+        posterImage: "images/symbiont/SymbiontPoster-small.webp"
     }
 ];

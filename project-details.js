@@ -131,18 +131,18 @@ const projectDetails = {
 
             <h2>Overview</h2>
             <img src="images/general/OGPCLogo-small.webp" data-full-src="images/general/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
-            <p><i>Nocte</i> was created for the <a href="https://ogpc.info" target="_blank">Oregon Game Project Challenge (OGPC)</a>, Oregon’s statewide game development competition. The competition spans several months and is judged by industry professionals across design, art, and technical execution.</p>
+            <p><i>Nocte</i> was created for the <a href="https://ogpc.info" target="_blank">Oregon Game Project Challenge (OGPC)</a>, Oregon's statewide game development competition. The competition spans several months and is judged by industry professionals across design, art, and technical execution.</p>
             <p>I worked on this project with my team <a href="https://linktr.ee/fractaldev" target="_blank">Fractal Development</a>. Coming off previous successes, we were ambitious and chose to pursue a technically complex idea centered around procedural generation.</p>
             <p>The theme for this year was <i>Cycles</i>. We interpreted this as a narrative and mechanical loop: repeatedly launching down to a hostile planet, dying, upgrading yourself, and trying again.</p>
 
             <h2>Planning</h2>
-            <img src="images/nocte/NocteMiroPlanning-small.webp" data-full-src="images/nocte/NocteMiroPlanning  .png" alt="Nocte planning in Miro" class="blog-image large">
+            <img src="images/nocte/NocteMiroPlanning-small.webp" data-full-src="images/nocte/NocteMiroPlanning  .png" alt="Nocte planning in Miro" class="blog-image medium">
             <p>Early planning focused on building a large, procedurally generated world designed for exploration. Our goal was a roguelike experience where each run felt different, but still supported meaningful progression and storytelling.</p>
             <p>In hindsight, we were overconfident in our ability to deliver such a broad scope within the competition timeline. We underestimated how much additional complexity procedural generation introduces, especially when layered with narrative systems, upgrades, and progression.</p>
             <p>Despite this, we committed to the idea and focused on building flexible systems that could adapt to dynamically generated content.</p>
 
             <h2>Development</h2>
-            <img src="images/nocte/NocteWorld-small.webp" data-full-src="images/nocte/NocteWorld.png" alt="Procedurally generated world" class="blog-image large">
+            <img src="images/nocte/NocteWorld-small.webp" data-full-src="images/nocte/NocteWorld.png" alt="Procedurally generated world" class="blog-image medium">
             <p>A significant portion of development was spent on procedural generation and ensuring that gameplay systems could function reliably in an unpredictable environment. This required careful separation between authored content and generated structure.</p>
 
             <img src="images/nocte/NoctePlayerController-small.webp" data-full-src="images/nocte/NoctePlayerController.png" alt="Player controller" class="blog-image medium">
@@ -168,7 +168,7 @@ const projectDetails = {
     "symbiont": {
         title: "Symbiont",
         content: `
-            <img src="images/symbiont/SymbiontPoster.png" alt="Symbiont poster" class="blog-image">
+            <img src="images/symbiont/SymbiontPoster-small.webp" data-full-src="images/symbiont/SymbiontPoster.png" alt="Symbiont poster" class="blog-image">
             <p>
                 <a href="https://tms.ogpc.info/Games/Details/d188f6c3-fb44-4d45-859c-2b3abd0a0ab2" target="_blank" class="project-button">View official page</a>
                 <a href="https://www.youtube.com/watch?v=veMg_MTGvXw" target="_blank" class="project-button secondary">View trailer</a>
@@ -176,29 +176,29 @@ const projectDetails = {
             </p>
 
             <h2>Overview</h2>
-            <img src="images/symbiont/OGPCLogo-small.webp" data-full-src="images/symbiont/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
+            <img src="images/general/OGPCLogo-small.webp" data-full-src="images/general/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
             <p><i>Symbiont</i> was our team's first game project and our first entry into the <a href="https://tms.ogpc.info" target="_blank">Oregon Game Project Challenge (OGPC)</a>. At the time, none of us had made a complete game before, and this project served as our introduction to game development as a whole.</p>
             <p>Unlike later years, we started the competition late and had only about three months to work instead of the usual nine. Much of that time was spent learning tools, workflows, and foundational skills rather than polishing content.</p>
             <p>The theme for this year was <i>Breaking Conventions</i>. We interpreted this as challenging traditional assumptions about familiar genres.</p>
 
             <h2>Planning</h2>
-            <img src="images/symbiont/SymbiontPlanning-small.webp" data-full-src="images/symbiont/SymbiontPlanning.png" alt="Early Symbiont planning" class="blog-image large">
+            <img src="images/symbiont/SymbiontPlanning-small.webp" data-full-src="images/symbiont/SymbiontPlanning.png" alt="Early Symbiont planning" class="blog-image medium">
             <p>The initial concept came from a challenge given by our computer science teacher: create a game that could be played using only three buttons. We wanted to push that constraint as far as possible.</p>
             <p>We decided to make an on-rails shooter without traditional movement. Instead of navigating freely through space, the player teleports between enemies, taking control of them and using their abilities to progress through a series of rooms.</p>
             <p>This approach allowed us to rethink the shooter genre while keeping input complexity extremely low.</p>
 
             <h2>Development</h2>
-            <img src="images/symbiont/SymbiontGameplay-small.webp" data-full-src="images/symbiont/SymbiontGameplay.png" alt="Symbiont gameplay" class="blog-image large">
+            <img src="images/symbiont/SymbiontModeling-small.webp" data-full-src="images/symbiont/SymbiontModeling.png" alt="Symbiont modeling" class="blog-image medium">
             <p>Because this was our first game, development focused heavily on fundamentals: input handling, basic combat logic, state management, and scene transitions. With such a limited control scheme, every system needed to be clear and intentional.</p>
 
-            <img src="images/symbiont/SymbiontTeleport-small.webp" data-full-src="images/symbiont/SymbiontTeleport.png" alt="Teleport mechanic" class="blog-image medium">
+            <img src="images/symbiont/SymbiontTesting-small.webp" data-full-src="images/symbiont/SymbiontTesting.png" alt="UI mockup/testing" class="blog-image medium">
             <p>The core mechanic—teleporting between enemies and taking them over—formed the backbone of the game. This allowed us to create variety without adding complex controls or player movement.</p>
 
-            <img src="images/symbiont/SymbiontRooms-small.webp" data-full-src="images/symbiont/SymbiontRooms.png" alt="Room-based progression" class="blog-image medium">
+            <img src="images/symbiont/SymbiontPortal-small.webp" data-full-src="images/symbiont/SymbiontPortal.png" alt="Seamless portals" class="blog-image medium">
             <p>Due to time constraints and our focus on learning, the game does not feature a full narrative. Instead, we concentrated on building a complete, functional gameplay loop that demonstrated strong technical execution.</p>
 
             <h2>Results</h2>
-            <img src="images/symbiont/SymbiontAwards-small.webp" data-full-src="images/symbiont/SymbiontAwards.png" alt="Best in Programming award" class="blog-image medium">
+            <img src="images/symbiont/SymbiontGameplay-small.webp" data-full-src="images/symbiont/SymbiontGameplay.png" alt="Symbiont gameplay" class="blog-image medium">
             <p>Despite the limited development time and our lack of prior experience, Symbiont was awarded <b>Best in Programming</b> at the competition.</p>
             <p>At this stage, our team consisted of three programmers, and this project laid the foundation for everything that followed. Symbiont marked the start of our growth as developers and set the direction for future projects focused on strong systems and unconventional design.</p>
         
