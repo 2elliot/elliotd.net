@@ -39,27 +39,32 @@ document.addEventListener('DOMContentLoaded', function () {
         projectsList.appendChild(projectItem);
     });
 
-    // Load videos AFTER the page has fully loaded (progress bar complete)
+    // Load videos only when they scroll near the viewport
     window.addEventListener('load', () => {
         const videos = document.querySelectorAll('.project-video[data-src]');
-        
-        videos.forEach((video, index) => {
-            // Stagger video loading by 100ms each
-            setTimeout(() => {
-                const source = document.createElement('source');
-                source.src = video.dataset.src;
-                source.type = 'video/mp4';
-                video.appendChild(source);
-                video.load();
-                
-                // Start playing as soon as first frame is available
-                video.addEventListener('loadeddata', () => {
-                    video.play().catch(err => {
-                        console.log('Autoplay prevented:', err);
-                    });
-                }, { once: true });
-            }, index * 100);
-        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const video = entry.target;
+                if (entry.isIntersecting && !video.querySelector('source')) {
+                    const source = document.createElement('source');
+                    source.src = video.dataset.src;
+                    source.type = 'video/mp4';
+                    video.appendChild(source);
+                    video.load();
+
+                    video.addEventListener('loadeddata', () => {
+                        video.play().catch(err => {
+                            console.log('Autoplay prevented:', err);
+                        });
+                    }, { once: true });
+
+                    observer.unobserve(video);
+                }
+            });
+        }, { rootMargin: '200px' });
+
+        videos.forEach(video => observer.observe(video));
     });
 
     restoreScrollPosition();
