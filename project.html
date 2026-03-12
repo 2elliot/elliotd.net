@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details - Elliot D'Alessandro</title>
+    <script>var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);</script>
     
     <!-- Open Graph / Social Media Preview Tags (will be updated by JavaScript) -->
     <meta property="og:title" content="Project - Elliot D'Alessandro">
@@ -24,8 +25,10 @@
 <body>
     <main>
         <div class="project-detail" id="projectDetail">
-            <!-- Project details will be loaded here -->
-            <a href="./" class="back-link">← Back</a>
+            <div class="project-nav">
+                <a href="./" class="back-link">← Home</a>
+                <div class="project-nav-arrows" id="projectNavArrows"></div>
+            </div>
             <div id="projectContent">
                 <p>Loading project...</p>
             </div>
@@ -39,7 +42,11 @@
         <div class="image-modal-caption" id="modalCaption"></div>
     </div>
 
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Switch to dark mode">☽</button>
+
+    <script src="projects.js"></script>
     <script src="project-details.js"></script>
     <script src="project-page.js"></script>
+    <script src="dark-mode.js"></script>
 </body>
 </html>

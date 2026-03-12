@@ -4,26 +4,53 @@
     padding: 3rem 2rem;
 }
 
-.back-link {
-    display: inline-block;
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 2rem;
-    color: #007bff;
+    gap: 1rem;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in 0.1s forwards;
+}
+
+.project-nav-arrows {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.back-link {
+    color: var(--link);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
-    opacity: 0;
-    animation: fadeIn 0.3s ease-in 0.1s forwards;
+    white-space: nowrap;
+}
+
+.back-link:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+.nav-arrow {
+    color: var(--link);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.nav-arrow:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
 }
 
 @keyframes fadeIn {
     to {
         opacity: 1;
     }
-}
-
-.back-link:hover {
-    color: #0056b3;
-    text-decoration: underline;
 }
 
 .project-header {
@@ -33,7 +60,21 @@
 .project-header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: #222;
+    color: var(--heading);
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-date {
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
 /* Blog-style content */
@@ -45,7 +86,7 @@
     font-size: 1.75rem;
     margin-top: 3rem;
     margin-bottom: 1rem;
-    color: #222;
+    color: var(--heading);
 }
 
 .project-blog-content h2:first-child {
@@ -54,19 +95,48 @@
 
 .project-blog-content p {
     font-size: 1.1rem;
-    color: #444;
+    color: var(--text);
     margin-bottom: 1.5rem;
 }
 
+.project-blog-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.project-blog-content li {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+}
+
 .project-blog-content a {
-    color: #007bff;
+    color: var(--link);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .project-blog-content a:hover {
-    color: #0056b3;
+    color: var(--link-hover);
     text-decoration: underline;
+}
+
+/* Topic reference links — visually distinct from regular external links */
+.project-blog-content a.topic-link,
+a.topic-link {
+    color: var(--topic-link);
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: var(--topic-link-underline);
+    text-decoration-thickness: 1.5px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.project-blog-content a.topic-link:hover,
+a.topic-link:hover {
+    color: var(--topic-link-hover);
+    text-decoration-style: solid;
 }
 
 /* Blog images */
@@ -74,7 +144,7 @@
     max-width: 100%;
     height: auto;
     margin: 2rem auto;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-light);
     display: block;
     cursor: pointer;
     transition: opacity 0.2s;
@@ -159,26 +229,26 @@
     padding: 0.75rem 1.5rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    background-color: #007bff;
+    background-color: var(--link);
     color: #fff !important;
     text-decoration: none !important;
     font-weight: 500;
     transition: background-color 0.3s;
-    border: 2px solid #007bff;
+    border: 2px solid var(--link);
 }
 
 .project-button:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: var(--link-hover);
+    border-color: var(--link-hover);
 }
 
 .project-button.secondary {
     background-color: transparent;
-    color: #007bff !important;
+    color: var(--link) !important;
 }
 
 .project-button.secondary:hover {
-    background-color: #007bff;
+    background-color: var(--link);
     color: #fff !important;
 }
 
@@ -187,16 +257,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-top: 1rem;
 }
 
 .tech-tag {
-    background-color: #f0f0f0;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    color: #555;
-    border: 1px solid #ddd;
-    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 @media (max-width: 768px) {

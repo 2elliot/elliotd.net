@@ -39,6 +39,21 @@ document.addEventListener('DOMContentLoaded', function () {
         projectsList.appendChild(projectItem);
     });
 
+    // Fade in project items as they scroll into view
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                fadeObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.project-item').forEach((item, index) => {
+        item.style.transitionDelay = `${index * 60}ms`;
+        fadeObserver.observe(item);
+    });
+
     // Load videos only when they scroll near the viewport
     window.addEventListener('load', () => {
         const videos = document.querySelectorAll('.project-video[data-src]');

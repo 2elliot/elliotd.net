@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elliot D'Alessandro - Portfolio</title>
+    <script>var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);</script>
     
     <!-- Open Graph / Social Media Preview Tags -->
     <meta property="og:title" content="Elliot D'Alessandro - Portfolio">
@@ -46,7 +47,10 @@
         </section>
     </main>
 
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Switch to dark mode">☽</button>
+
     <script src="projects.js"></script>
     <script src="script.js"></script>
+    <script src="dark-mode.js"></script>
 </body>
 </html>

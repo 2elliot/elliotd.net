@@ -7,24 +7,61 @@ document.addEventListener('DOMContentLoaded', function () {
     if (projectId && projectDetails[projectId]) {
         const project = projectDetails[projectId];
 
+        // Look up metadata from projects.js (date, technologies, prev/next)
+        const projectIndex = projects.findIndex(p => p.id === projectId);
+        const projectMeta = projects[projectIndex];
+        const prevProject = projectIndex > 0 ? projects[projectIndex - 1] : null;
+        const nextProject = projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
+
         // Update page title
         document.title = `${project.title} - Elliot D'Alessandro`;
 
         // Update Open Graph tags for social sharing
         updateMetaTags(project.title, projectId);
 
+        // Populate prev/next navigation
+        const navArrows = document.getElementById('projectNavArrows');
+        if (navArrows) {
+            navArrows.innerHTML = `
+                ${prevProject ? `<a href="project.html?id=${prevProject.id}#content" class="nav-arrow">← ${prevProject.title}</a>` : '<span></span>'}
+                ${nextProject ? `<a href="project.html?id=${nextProject.id}#content" class="nav-arrow">${nextProject.title} →</a>` : ''}
+            `;
+        }
+
+        // Build date and tech tag strings
+        const dateStr = projectMeta
+            ? projectMeta.dateStart + (projectMeta.dateEnd ? ' – ' + projectMeta.dateEnd : '')
+            : '';
+        const techTags = projectMeta?.technologies
+            ? projectMeta.technologies.map(t => `<span class="tech-tag">${t}</span>`).join('')
+            : '';
+
         // Build project page HTML
         let html = `
             <div class="project-header" id="content">
                 <h1>${project.title}</h1>
             </div>
-            
+
             <div class="project-blog-content">
                 ${project.content}
             </div>
         `;
 
         projectContent.innerHTML = html;
+
+        // Insert date/tech meta after the first (poster) image
+        if (dateStr || techTags) {
+            const metaDiv = document.createElement('div');
+            metaDiv.className = 'project-meta';
+            metaDiv.innerHTML = `
+                ${dateStr ? `<span class="project-date">${dateStr}</span>` : ''}
+                ${techTags ? `<div class="tech-tags">${techTags}</div>` : ''}
+            `;
+            const posterImage = projectContent.querySelector('.blog-image');
+            if (posterImage) {
+                posterImage.after(metaDiv);
+            }
+        }
 
         // Scroll to content smoothly if hash is present
         if (window.location.hash === '#content') {

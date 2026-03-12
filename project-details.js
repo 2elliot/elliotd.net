@@ -11,8 +11,8 @@ const projectDetails = {
             
             <h2>Overview</h2>
             <img src="images/general/GMTKLogo-small.webp" data-full-src="images/general/GMTKLogo.png" alt="GMTK Game Jam 2025" class="blog-image small">
-            <p>This game was made for the <a href="https://itch.io/jam/gmtk-2025" target="_blank">2025 GMTK Game Jam</a>, a game making competition hosted by the Youtuber <a href=https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw" target="_blank">Game Maker's Toolkit</a>. The GMTK Game Jam is an annual game making marathon, where individuals and teams try to make a game that fits a theme, in only 4 days.</p>
-            <p>This year I competed with my team <a href="https://linktr.ee/fractaldev" target="_blank">Fractal Development</a>. We have competed in several game jams together, including previous GMTK jams, and state competitions.</p>
+            <p>This game was made for the <a href="topic.html?id=gmtk" class="topic-link">2025 GMTK Game Jam</a>, a game making competition hosted by the Youtuber <a href=https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw" target="_blank">Game Maker's Toolkit</a>. The GMTK Game Jam is an annual game making marathon, where individuals and teams try to make a game that fits a theme, in only 4 days.</p>
+            <p>This year I competed with my team <a href="topic.html?id=fractal-dev" class="topic-link">Fractal Development</a>. We have competed in several game jams together, including previous GMTK jams, and state competitions.</p>
             <p>The theme for the 2025 competition was <i>Loop</i>. Competitors are able to use pre-existing code or assets, but shouldn't make stuff ahead of time specifically for this competition.</p>
                         
             <h2>Planning</h2>
@@ -50,8 +50,8 @@ const projectDetails = {
 
             <h2>Overview</h2>
             <img src="images/general/OGPCLogo-small.webp" data-full-src="images/general/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
-            <p><i>Northwoods</i> was created for the <a href="https://www.ogpc.info/" target="_blank">Oregon Game Project Challenge (OGPC)</a>, Oregon's statewide game development competition. Unlike most game jams, OGPC runs over the course of roughly nine months and is judged by a panel of industry professionals across multiple disciplines.</p>
-            <p>I worked on this project with my team <a href="https://linktr.ee/fractaldev" target="_blank">Fractal Development</a>. This was our final year competing together, as the rest of our teammates were graduating, and we treated this project as the final a culmination of everything we had learned in previous competitions.</p>
+            <p><i>Northwoods</i> was created for the <a href="topic.html?id=ogpc" class="topic-link">Oregon Game Project Challenge (OGPC)</a>, Oregon's statewide game development competition. Unlike most game jams, OGPC runs over the course of roughly nine months and is judged by a panel of industry professionals across multiple disciplines.</p>
+            <p>I worked on this project with my team <a href="topic.html?id=fractal-dev" class="topic-link">Fractal Development</a>. This was our final year competing together, as the rest of our teammates were graduating, and we treated this project as the final a culmination of everything we had learned in previous competitions.</p>
             <p>The theme for this year was <i>Extreme Weather</i>. Unlike other jams, OGPC tends to emphasize more general themes that allow for broad interpretation.</p>
 
             <h2>Planning</h2>
@@ -92,7 +92,7 @@ const projectDetails = {
 
             <h2>Overview</h2>
             <img src="images/general/GMTKLogo-small.webp" data-full-src="images/general/GMTKLogo.png" alt="GMTK Game Jam" class="blog-image small">
-            <p>This game was made for the <a href="https://itch.io/jam/gmtk-2024" target="_blank">2024 GMTK Game Jam</a>, a game making competition hosted by the Youtuber <a href=https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw" target="_blank">Game Maker's Toolkit</a>. The GMTK Game Jam is an annual game making marathon, where individuals and teams try to make a game that fits a theme, in only 4 days.</p>
+            <p>This game was made for the <a href="topic.html?id=gmtk" class="topic-link">2024 GMTK Game Jam</a>, a game making competition hosted by the Youtuber <a href=https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw" target="_blank">Game Maker's Toolkit</a>. The GMTK Game Jam is an annual game making marathon, where individuals and teams try to make a game that fits a theme, in only 4 days.</p>
             <p>This was the first time I competed in the GMTK Game Jam, and also the first time my team worked within such a short development window.</p>
             <p>The theme for this year was <i>Built to Scale</i>. Competitors are able to use pre-existing code or assets, but shouldn't make stuff ahead of time specifically for this competition.</p>
 
@@ -131,8 +131,8 @@ const projectDetails = {
 
             <h2>Overview</h2>
             <img src="images/general/OGPCLogo-small.webp" data-full-src="images/general/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
-            <p><i>Nocte</i> was created for the <a href="https://ogpc.info" target="_blank">Oregon Game Project Challenge (OGPC)</a>, Oregon's statewide game development competition. The competition spans several months and is judged by industry professionals across design, art, and technical execution.</p>
-            <p>I worked on this project with my team <a href="https://linktr.ee/fractaldev" target="_blank">Fractal Development</a>. Coming off previous successes, we were ambitious and chose to pursue a technically complex idea centered around procedural generation.</p>
+            <p><i>Nocte</i> was created for the <a href="topic.html?id=ogpc" class="topic-link">Oregon Game Project Challenge (OGPC)</a>, Oregon's statewide game development competition. The competition spans several months and is judged by industry professionals across design, art, and technical execution.</p>
+            <p>I worked on this project with my team <a href="topic.html?id=fractal-dev" class="topic-link">Fractal Development</a>. Coming off previous successes, we were ambitious and chose to pursue a technically complex idea centered around procedural generation.</p>
             <p>The theme for this year was <i>Cycles</i>. We interpreted this as a narrative and mechanical loop: repeatedly launching down to a hostile planet, dying, upgrading yourself, and trying again.</p>
 
             <h2>Planning</h2>
@@ -177,7 +177,7 @@ const projectDetails = {
 
             <h2>Overview</h2>
             <img src="images/general/OGPCLogo-small.webp" data-full-src="images/general/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
-            <p><i>Symbiont</i> was our team's first game project and our first entry into the <a href="https://tms.ogpc.info" target="_blank">Oregon Game Project Challenge (OGPC)</a>. At the time, none of us had made a complete game before, and this project served as our introduction to game development as a whole.</p>
+            <p><i>Symbiont</i> was our team's first game project and our first entry into the <a href="topic.html?id=ogpc" class="topic-link">Oregon Game Project Challenge (OGPC)</a>. At the time, none of us had made a complete game before, and this project served as our introduction to game development as a whole.</p>
             <p>Unlike later years, we started the competition late and had only about three months to work instead of the usual nine. Much of that time was spent learning tools, workflows, and foundational skills rather than polishing content.</p>
             <p>The theme for this year was <i>Breaking Conventions</i>. We interpreted this as challenging traditional assumptions about familiar genres.</p>
 
