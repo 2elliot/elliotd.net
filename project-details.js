@@ -136,7 +136,7 @@ const projectDetails = {
             <p>The theme for this year was <i>Cycles</i>. We interpreted this as a narrative and mechanical loop: repeatedly launching down to a hostile planet, dying, upgrading yourself, and trying again.</p>
 
             <h2>Planning</h2>
-            <img src="images/nocte/NocteMiroPlanning-small.webp" data-full-src="images/nocte/NocteMiroPlanning  .png" alt="Nocte planning in Miro" class="blog-image medium">
+            <img src="images/nocte/NocteMiroPlanning-small.webp" data-full-src="images/nocte/NocteMiroPlanning.png" alt="Nocte planning in Miro" class="blog-image medium">
             <p>Early planning focused on building a large, procedurally generated world designed for exploration. Our goal was a roguelike experience where each run felt different, but still supported meaningful progression and storytelling.</p>
             <p>In hindsight, we were overconfident in our ability to deliver such a broad scope within the competition timeline. We underestimated how much additional complexity procedural generation introduces, especially when layered with narrative systems, upgrades, and progression.</p>
             <p>Despite this, we committed to the idea and focused on building flexible systems that could adapt to dynamically generated content.</p>
