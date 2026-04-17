@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const navArrows = document.getElementById('projectNavArrows');
         if (navArrows) {
             navArrows.innerHTML = `
-                ${prevProject ? `<a href="project.html?id=${prevProject.id}#content" class="nav-arrow">← ${prevProject.title}</a>` : '<span></span>'}
-                ${nextProject ? `<a href="project.html?id=${nextProject.id}#content" class="nav-arrow">${nextProject.title} →</a>` : ''}
+                ${prevProject ? `<a href="project.html?id=${prevProject.id}" class="nav-arrow">← ${prevProject.title}</a>` : '<span></span>'}
+                ${nextProject ? `<a href="project.html?id=${nextProject.id}" class="nav-arrow">${nextProject.title} →</a>` : ''}
             `;
         }
 
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Build project page HTML
         let html = `
-            <div class="project-header" id="content">
+            <div class="project-header">
                 <h1>${project.title}</h1>
             </div>
 
@@ -61,13 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (posterImage) {
                 posterImage.after(metaDiv);
             }
-        }
-
-        // Scroll to content smoothly if hash is present
-        if (window.location.hash === '#content') {
-            setTimeout(() => {
-                document.getElementById('content').scrollIntoView({ behavior: 'instant', block: 'start' });
-            }, 0);
         }
 
         // Add click handlers for image modal

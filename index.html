@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elliot D'Alessandro - Portfolio</title>
+    <title>Elliot D'Alessandro</title>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LPHRPDBYF"></script>
@@ -14,35 +14,46 @@
       gtag('config', 'G-1LPHRPDBYF');
     </script>
 
-    <script>var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);</script>
-    
+    <script>document.documentElement.setAttribute('data-theme',window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');</script>
+
     <!-- Open Graph / Social Media Preview Tags -->
-    <meta property="og:title" content="Elliot D'Alessandro - Portfolio">
-    <meta property="og:description" content="My creative portfolio showing my work">
+    <meta property="og:title" content="Elliot D'Alessandro">
+    <meta property="og:description" content="Personal site of Elliot D'Alessandro">
     <meta property="og:image" content="https://elliotd.net/images/og-preview.jpg">
     <meta property="og:url" content="https://elliotd.net">
     <meta property="og:type" content="website">
-    
+
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Elliot D'Alessandro - Portfolio">
-    <meta name="twitter:description" content="My creative portfolio showing my work">
+    <meta name="twitter:title" content="Elliot D'Alessandro">
+    <meta name="twitter:description" content="Personal site of Elliot D'Alessandro">
     <meta name="twitter:image" content="https://elliotd.net/images/og-preview.jpg">
-    
+
     <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
-    <main>
+    <main class="home">
         <section class="hero-section">
             <div class="hero-content">
                 <h1 class="hero-name">Elliot D'Alessandro</h1>
-                <p class="hero-intro">Hi! I'm a high school student in Oregon and I make video games.</p>
+                <p class="hero-intro">Hi! I'm a high school student based in Oregon.</p>
             </div>
         </section>
 
-        <section class="projects-section">
-            <div class="projects-list" id="projectsList">
-                <!-- Projects will be loaded from projects.js -->
+        <section class="contact-section">
+            <div class="sections-grid">
+                <a class="section-card" href="portfolio/">
+                    <h3>Portfolio</h3>
+                    <p>Games and projects I've built.</p>
+                </a>
+                <a class="section-card" href="side-projects/">
+                    <h3>Side Projects</h3>
+                    <p>Smaller things I've built along the way.</p>
+                </a>
+                <!-- <a class="section-card" href="research/">
+                    <h3>Research</h3>
+                    <p>Writing and research projects.</p>
+                </a> -->
             </div>
         </section>
 
@@ -56,11 +67,5 @@
             </div>
         </section>
     </main>
-
-    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Switch to dark mode">☽</button>
-
-    <script src="projects.js"></script>
-    <script src="script.js"></script>
-    <script src="dark-mode.js"></script>
 </body>
 </html>

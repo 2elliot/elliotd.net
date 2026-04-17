@@ -14,7 +14,7 @@
       gtag('config', 'G-1LPHRPDBYF');
     </script>
 
-    <script>var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);</script>
+    <script>document.documentElement.setAttribute('data-theme',window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');</script>
     
     <!-- Open Graph / Social Media Preview Tags (will be updated by JavaScript) -->
     <meta property="og:title" content="Project - Elliot D'Alessandro">
@@ -34,11 +34,11 @@
 </head>
 <body>
     <main>
+        <div class="project-nav">
+            <a href="/portfolio/" class="back-link">Portfolio</a>
+            <div class="project-nav-arrows" id="projectNavArrows"></div>
+        </div>
         <div class="project-detail" id="projectDetail">
-            <div class="project-nav">
-                <a href="./" class="back-link">← Home</a>
-                <div class="project-nav-arrows" id="projectNavArrows"></div>
-            </div>
             <div id="projectContent">
                 <p>Loading project...</p>
             </div>
@@ -52,11 +52,8 @@
         <div class="image-modal-caption" id="modalCaption"></div>
     </div>
 
-    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Switch to dark mode">☽</button>
-
     <script src="projects.js"></script>
     <script src="project-details.js"></script>
     <script src="project-page.js"></script>
-    <script src="dark-mode.js"></script>
 </body>
 </html>

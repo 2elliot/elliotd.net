@@ -5,18 +5,22 @@ document.addEventListener('DOMContentLoaded', function () {
     projects.forEach(project => {
         const projectItem = document.createElement('a');
         projectItem.className = 'project-item';
-        projectItem.href = `project.html?id=${project.id}#content`;
+        projectItem.href = `/project.html?id=${project.id}`;
+
+        const toAbs = (p) => p ? (p.startsWith('/') || /^https?:\/\//.test(p) ? p : '/' + p) : '';
+        const posterSrc = toAbs(project.posterImage || project.thumbnail || '');
+        const videoSrc = toAbs(project.video);
 
         // Don't load video sources initially - just set up the video element with poster
         const mediaHtml = project.video
-            ? `<video class="project-video" 
-                      autoplay 
-                      loop 
-                      muted 
-                      playsinline 
-                      poster="${project.posterImage || project.thumbnail || ''}" 
+            ? `<video class="project-video"
+                      autoplay
+                      loop
+                      muted
+                      playsinline
+                      poster="${posterSrc}"
                       preload="none"
-                      data-src="${project.video}">
+                      data-src="${videoSrc}">
                </video>`
             : '<div class="project-media"></div>';
 
@@ -87,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function restoreScrollPosition() {
     // Check if we have a saved scroll position for this page
-    const savedPosition = sessionStorage.getItem('indexScrollPosition');
+    const savedPosition = sessionStorage.getItem('portfolioScrollPosition');
     
     if (savedPosition !== null) {
         // Restore the scroll position
@@ -100,7 +104,7 @@ function restoreScrollPosition() {
         // Debounce to avoid saving too frequently
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(function() {
-            sessionStorage.setItem('indexScrollPosition', window.scrollY);
+            sessionStorage.setItem('portfolioScrollPosition', window.scrollY);
         }, 100);
     });
 }

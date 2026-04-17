@@ -14,26 +14,23 @@
       gtag('config', 'G-1LPHRPDBYF');
     </script>
 
-    <script>var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);</script>
+    <script>document.documentElement.setAttribute('data-theme',window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');</script>
     <link rel="stylesheet" href="styles.css?v=2">
     <link rel="stylesheet" href="project-styles.css?v=2">
 </head>
 <body>
     <main>
+        <div class="project-nav">
+            <a href="/portfolio/" class="back-link">Portfolio</a>
+        </div>
         <div class="project-detail" id="topicDetail">
-            <div class="project-nav">
-                <a href="./" class="back-link">← Home</a>
-            </div>
             <div id="topicContent">
                 <p>Loading...</p>
             </div>
         </div>
     </main>
 
-    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Switch to dark mode">☽</button>
-
     <script src="topic-details.js"></script>
     <script src="topic-page.js"></script>
-    <script src="dark-mode.js"></script>
 </body>
 </html>
