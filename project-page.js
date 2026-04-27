@@ -49,7 +49,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
         projectContent.innerHTML = html;
 
-        // Insert date/tech meta after the first (poster) image
+        // Replace the first (poster) image with an autoplaying video that links to the trailer
+        const posterImage = projectContent.querySelector('.blog-image');
+        if (posterImage && projectMeta?.video) {
+            const sizeClasses = Array.from(posterImage.classList)
+                .filter(c => c !== 'blog-image')
+                .join(' ');
+            const toAbs = (p) => p ? (p.startsWith('/') || /^https?:\/\//.test(p) ? p : '/' + p) : '';
+            const posterSrc = toAbs(projectMeta.posterImage || posterImage.getAttribute('src'));
+            const videoSrc = toAbs(projectMeta.video);
+            const trailer = projectMeta.trailer;
+
+            const wrapper = document.createElement(trailer ? 'a' : 'div');
+            wrapper.className = `project-trailer ${sizeClasses}`.trim();
+            if (trailer) {
+                wrapper.href = trailer;
+                wrapper.target = '_blank';
+                wrapper.rel = 'noopener';
+                wrapper.setAttribute('aria-label', `Watch ${project.title} trailer`);
+            }
+            wrapper.innerHTML = `
+                <video class="project-trailer-video"
+                       autoplay loop muted playsinline
+                       poster="${posterSrc}"
+                       preload="auto">
+                    <source src="${videoSrc}" type="video/mp4">
+                </video>
+            `;
+            posterImage.replaceWith(wrapper);
+            const video = wrapper.querySelector('video');
+            video.play().catch(() => { /* autoplay may be blocked; poster still shows */ });
+        }
+
+        // Insert date/tech meta after the trailer/poster
         if (dateStr || techTags) {
             const metaDiv = document.createElement('div');
             metaDiv.className = 'project-meta';
@@ -57,9 +89,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 ${dateStr ? `<span class="project-date">${dateStr}</span>` : ''}
                 ${techTags ? `<div class="tech-tags">${techTags}</div>` : ''}
             `;
-            const posterImage = projectContent.querySelector('.blog-image');
-            if (posterImage) {
-                posterImage.after(metaDiv);
+            const headerMedia = projectContent.querySelector('.project-trailer, .blog-image');
+            if (headerMedia) {
+                headerMedia.after(metaDiv);
             }
         }
 

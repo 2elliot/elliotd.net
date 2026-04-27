@@ -181,6 +181,31 @@ a.topic-link:hover {
     width: 100%;
 }
 
+/* Header trailer video (replaces poster image at top of project page) */
+.project-trailer {
+    display: block;
+    max-width: 100%;
+    margin: 2rem auto;
+    border: 1px solid var(--border-light);
+    line-height: 0;
+    transition: opacity 0.2s;
+    width: 100%;
+}
+
+.project-trailer.small { width: 300px; }
+.project-trailer.medium { width: 500px; }
+.project-trailer.large { width: 700px; }
+.project-trailer.full { width: 100%; }
+
+a.project-trailer { cursor: pointer; }
+a.project-trailer:hover { opacity: 0.9; }
+
+.project-trailer-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Image modal/lightbox */
 .image-modal {
     display: none;
@@ -296,6 +321,16 @@ a.topic-link:hover {
     .blog-image.small,
     .blog-image.medium,
     .blog-image.large {
+        width: 100%;
+    }
+
+    .project-trailer {
+        margin: 1.5rem 0;
+    }
+
+    .project-trailer.small,
+    .project-trailer.medium,
+    .project-trailer.large {
         width: 100%;
     }
 
