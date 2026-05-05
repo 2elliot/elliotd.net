@@ -30,9 +30,10 @@
     <meta name="twitter:image" content="https://elliotd.net/images/og-preview.jpg">
 
     <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="project-styles.css?v=3">
 </head>
 <body>
-    <main class="home">
+    <main>
         <section class="hero-section">
             <div class="hero-content">
                 <h1 class="hero-name">Elliot D'Alessandro</h1>
@@ -40,20 +41,9 @@
             </div>
         </section>
 
-        <section class="contact-section">
-            <div class="sections-grid">
-                <a class="section-card" href="portfolio/">
-                    <h3>Portfolio</h3>
-                    <p>Games and projects I've built.</p>
-                </a>
-                <a class="section-card" href="side-projects/">
-                    <h3>Side Projects</h3>
-                    <p>Smaller things I've built along the way.</p>
-                </a>
-                <!-- <a class="section-card" href="research/">
-                    <h3>Research</h3>
-                    <p>Writing and research projects.</p>
-                </a> -->
+        <section class="projects-section">
+            <div class="projects-list" id="projectsList">
+                <!-- Projects will be loaded from projects.js -->
             </div>
         </section>
 
@@ -67,5 +57,8 @@
             </div>
         </section>
     </main>
+
+    <script src="projects.js?v=3"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>
