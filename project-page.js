@@ -1,7 +1,7 @@
 // Load project details based on URL parameter
 document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
-    const projectId = urlParams.get('id');
+    const projectId = window.__projectId || urlParams.get('id');
     const projectContent = document.getElementById('projectContent');
 
     if (projectId && projectDetails[projectId]) {
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const navArrows = document.getElementById('projectNavArrows');
         if (navArrows) {
             navArrows.innerHTML = `
-                ${prevProject ? `<a href="project.html?id=${prevProject.id}" class="nav-arrow">← ${prevProject.title}</a>` : '<span></span>'}
-                ${nextProject ? `<a href="project.html?id=${nextProject.id}" class="nav-arrow">${nextProject.title} →</a>` : ''}
+                ${prevProject ? `<a href="/projects/${prevProject.id}/" class="nav-arrow">← ${prevProject.title}</a>` : '<span></span>'}
+                ${nextProject ? `<a href="/projects/${nextProject.id}/" class="nav-arrow">${nextProject.title} →</a>` : ''}
             `;
         }
 
@@ -159,7 +159,7 @@ function setupImageModal() {
 // Update meta tags for social sharing
 function updateMetaTags(projectTitle, projectId) {
     const description = `Check out ${projectTitle} - a project by Elliot D'Alessandro`;
-    const url = `https://elliotd.net/project.html?id=${projectId}`;
+    const url = `https://elliotd.net/projects/${projectId}/`;
     const image = `https://elliotd.net/images/${projectId}-preview.jpg`;
 
     // Update or create Open Graph tags

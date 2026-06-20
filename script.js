@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     projects.forEach(project => {
         const projectItem = document.createElement('a');
         projectItem.className = 'project-item';
-        projectItem.href = `/project.html?id=${project.id}`;
+        projectItem.href = `/projects/${project.id}/`;
 
         const toAbs = (p) => p ? (p.startsWith('/') || /^https?:\/\//.test(p) ? p : '/' + p) : '';
         const posterSrc = toAbs(project.posterImage || project.thumbnail || '');
