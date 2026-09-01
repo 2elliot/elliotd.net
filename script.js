@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const projectsList = document.getElementById('projectsList');
 
-    projects.forEach(project => {
+    projects.filter(project => !project.hidden).forEach(project => {
         const projectItem = document.createElement('a');
         projectItem.className = 'project-item';
         projectItem.href = `/projects/${project.id}/`;

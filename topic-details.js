@@ -52,8 +52,9 @@ const topicDetails = {
             <h2>Fractal Development at GMTK</h2>
             <p><a href="topic.html?id=fractal-dev" class="topic-link">Fractal Development</a> has competed in the GMTK Game Jam twice:</p>
             <ul>
-                <li><a href="project.html?id=heavyville">Heavyville</a> (2024, theme: <i>Built to Scale</i>) — top 7% out of 7,500+ entries</li>
-                <li><a href="project.html?id=sheep">On the Lamb!</a> (2025, theme: <i>Loop</i>) — top 4% out of 10,000+ entries</li>
+            <li><a href="project.html?id=heavyville">Heavyville</a> (2024, theme: <i>Built to Scale</i>) — top 7% out of 7,500+ entries</li>
+            <li><a href="project.html?id=sheep">On the Lamb!</a> (2025, theme: <i>Loop</i>) — top 4% out of 9,500+ entries</li>
+            <li><a href="project.html?id=impact">Time to Impact</a> (2026, theme: <i>Countdown</i>) — top 2% out of 10,000+ entries</li>
             </ul>
 
             <p><a href="https://itch.io/jam/gmtk-2025" target="_blank" class="project-button secondary">GMTK 2025 on itch.io</a></p>

@@ -8,10 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const project = projectDetails[projectId];
 
         // Look up metadata from projects.js (date, technologies, prev/next)
-        const projectIndex = projects.findIndex(p => p.id === projectId);
-        const projectMeta = projects[projectIndex];
-        const prevProject = projectIndex > 0 ? projects[projectIndex - 1] : null;
-        const nextProject = projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
+        const projectMeta = projects.find(p => p.id === projectId);
+        // Hidden projects are reachable by direct URL but excluded from prev/next navigation
+        const visibleProjects = projects.filter(p => !p.hidden);
+        const visibleIndex = visibleProjects.findIndex(p => p.id === projectId);
+        const prevProject = visibleIndex > 0 ? visibleProjects[visibleIndex - 1] : null;
+        const nextProject = visibleIndex >= 0 && visibleIndex < visibleProjects.length - 1 ? visibleProjects[visibleIndex + 1] : null;
 
         // Update page title
         document.title = `${project.title} - Elliot D'Alessandro`;

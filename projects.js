@@ -2,6 +2,17 @@
 // Each project should have: id, title, shortDescription, image (optional)
 const projects = [
     {
+        id: "impact",
+        title: "Time To Impact",
+        dateStart: "August, 2026",
+        shortDescription: "A game where you take orders from a vampire duck to use large artillery. Built in Unity in 4 days for the GMTK 2026 game jam.",
+        video: "videos/Impact_Trailer_Compressed.mp4",
+        posterImage: "images/impact/impact.jpg",
+        trailer: "https://www.youtube.com/watch?v=E9K7pVmvFpQ",
+        technologies: ["Unity", "C#"],
+        hidden: true
+    },
+    {
         id: "sheep",
         title: "On the Lamb!",
         dateStart: "August, 2025",
