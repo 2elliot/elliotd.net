@@ -13,13 +13,13 @@ const projectDetails = {
             <img src="/images/general/GMTKLogo-small.webp" data-full-src="/images/general/GMTKLogo.png" alt="GMTK Game Jam 2026" class="blog-image small">
             <p>This game was made for the <a href="/topic.html?id=gmtk" class="topic-link">2026 GMTK Game Jam</a>, a game making competition hosted by the Youtuber <a href=https://www.youtube.com/channel/UCqJ-Xo29CKyLTjn6z2XwYAw" target="_blank">Game Maker's Toolkit</a>. The GMTK Game Jam is an annual game making marathon, where individuals and teams try to make a game that fits a theme, in only 4 days.</p>
             <p>This year I competed with my team <a href="/topic.html?id=fractal-dev" class="topic-link">Fractal Development</a>. We have competed in several game jams together, including previous GMTK jams, and state competitions.</p>
-            <p>The theme for the 2026 competition was <i>Loop</i>. Competitors are able to use pre-existing code or assets, but shouldn't make stuff ahead of time specifically for this competition.</p>
+            <p>The theme for the 2026 competition was <i>Countdown</i>. Competitors are able to use pre-existing code or assets, but shouldn't make stuff ahead of time specifically for this competition.</p>
                         
             <h2>Planning</h2>
             <img src="/images/sheep/SheepMiroPlanning-small.webp" data-full-src="/images/sheep/SheepMiroPlanning.png" alt="Planning inside Miro" class="blog-image large">
             <p>Our first step to making games is loading into a  <a href="https://miro.com" target="_blank">Miro board</a> and writing down literally every idea we have. In a competition this short, the planning phase is extremely important and will determine what the game will become. For a normal competition this process can take weeks of prototyping and iteration, however during this game we quickly simply didn't have the time.</p>
             <img src="/images/sheep/SheepMiroProsCons-small.webp" data-full-src="/images/sheep/SheepMiroProsCons.png" alt="Pros and cons list" class="blog-image medium">
-            <p>This competition's theme was Loop. We had ideas that included a donut factory game, throwing boomerangs to block out the sun, making a time loop game where the world resets, and other questionable ideas, however we decided on a game where you have to lasso (loop) sheep and capture them into pens.</p>
+            <p>This competition's theme was Countdown. We had ideas that included a donut factory game, throwing boomerangs to block out the sun, making a time loop game where the world resets, and other questionable ideas, however we decided on a game where you have to lasso (loop) sheep and capture them into pens.</p>
                         
             <h2>Development</h2>
             <p>Now that we had an idea, production was full steam ahead. We use the <a href="https://unity.com/" target="_blank">Unity Engine</a> for our game engine of choice. I started working on the lasso mechanic which allows the player to capture sheep. This included both the mechanics of throwing the lasso and calculating which sheep were in the loop, and the visuals of the lasso itself.</p>
@@ -215,30 +215,30 @@ const projectDetails = {
 
             <h2>Overview</h2>
             <img src="/images/general/OGPCLogo-small.webp" data-full-src="/images/general/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
-            <p><i>Symbiont</i> was our team's first game project and our first entry into the <a href="/topic.html?id=ogpc" class="topic-link">Oregon Game Project Challenge (OGPC)</a>. At the time, none of us had made a complete game before, and this project served as our introduction to game development as a whole.</p>
-            <p>Unlike later years, we started the competition late and had only about three months to work instead of the usual nine. Much of that time was spent learning tools, workflows, and foundational skills rather than polishing content.</p>
-            <p>The theme for this year was <i>Breaking Conventions</i>. We interpreted this as challenging traditional assumptions about familiar genres.</p>
+            <p>Symbiont was our team <a href="/topic.html?id=fractal-dev" class="topic-link">Fractal Development</a>'s first game, and beyond some simple class projects, the first game that any of our members had made before. We made this game using <a href="https://unity.com/" target="_blank">Unity</a> for the <a href="/topic.html?id=ogpc" class="topic-link">Oregon Game Project Challenge (OGPC)</a>, a competition for making games against other Oregon high school teams.</p>
+            <p>This year we started quite a bit late compared to the start date for the competition, leaving us with only three months to work instead of the designated nine. With this being our first project, a lot of our time was spent learning tools and building workflows instead of actual game development.</p>
+            <p>All game jam competitions like this have a theme, and this year it was <i>Breaking Conventions</i>.</p>
 
             <h2>Planning</h2>
             <img src="/images/symbiont/SymbiontPlanning-small.webp" data-full-src="/images/symbiont/SymbiontPlanning.png" alt="Early Symbiont planning" class="blog-image medium">
-            <p>The initial concept came from a challenge given by our computer science teacher: create a game that could be played using only three buttons. We wanted to push that constraint as far as possible.</p>
-            <p>We decided to make an on-rails shooter without traditional movement. Instead of navigating freely through space, the player teleports between enemies, taking control of them and using their abilities to progress through a series of rooms.</p>
-            <p>This approach allowed us to rethink the shooter genre while keeping input complexity extremely low.</p>
+            <p>Earlier in the year our teacher challenged us to make a game using only three buttons, and we decided to try to make a shooter game. How do you make a shooter game with only three buttons? You take away movement. For that project we made an on-rails shooter similar to the zombie-shooting games you can play at the arcade. (Could anyone actually beat those games with one life?)</p>
+            <p>This idea fit quite well into the <i>Breaking Conventions</i> theme but we decided to add one more mechanic: teleporting. All enemies would move on a designated path through rooms and you would be able to teleport between them, taking control and then shooting your previous host. Hence Symbiont.</p>
+            <p>An issue we didn't solve during planning was how to actually beat this game. What's the goal? It can't be to get to a location as you could just teleport around and never shoot, and in an open map it'd be dangerously easy to get stuck with nothing to teleport to. We'd tackle this issue later in development.</p>
 
             <h2>Development</h2>
             <img src="/images/symbiont/SymbiontModeling-small.webp" data-full-src="/images/symbiont/SymbiontModeling.png" alt="Symbiont modeling" class="blog-image medium">
-            <p>Because this was our first game, development focused heavily on fundamentals: input handling, basic combat logic, state management, and scene transitions. With such a limited control scheme, every system needed to be clear and intentional.</p>
+            <p>This project was spent mostly figuring out the engine and our workflow. We spent time building input systems (pre-new input system), figuring out particles, lighting, and modeling.</p>
 
             <img src="/images/symbiont/SymbiontTesting-small.webp" data-full-src="/images/symbiont/SymbiontTesting.png" alt="UI mockup/testing" class="blog-image medium">
-            <p>The core mechanic—teleporting between enemies and taking them over—formed the backbone of the game. This allowed us to create variety without adding complex controls or player movement.</p>
+            <p>The core mechanic of teleporting between enemies didn't turn out to be very difficult, however the previous issue of what beating the game looks like turned out to be much more difficult. We decided to build individual 'rooms' with preset entries and exits and then stitch them together, only allowing the player to move to the next room when all of the enemies in the room have been defeated. This required us to create static cameras that you can teleport to in case of getting stuck.</p>
 
             <img src="/images/symbiont/SymbiontPortal-small.webp" data-full-src="/images/symbiont/SymbiontPortal.png" alt="Seamless portals" class="blog-image medium">
-            <p>Due to time constraints and our focus on learning, the game does not feature a full narrative. Instead, we concentrated on building a complete, functional gameplay loop that demonstrated strong technical execution.</p>
+            <p>Instead of physically 'stitching' these rooms together in space, we placed each room far apart from each other and faked the room transitions by creating portals and rendering two cameras with a little shader trickery. This was made significantly easier because the player never actually crossed through the portal, instead they teleported from one room to the next.</p>
 
             <h2>Results</h2>
             <img src="/images/symbiont/SymbiontGameplay-small.webp" data-full-src="/images/symbiont/SymbiontGameplay.png" alt="Symbiont gameplay" class="blog-image medium">
-            <p>Despite the limited development time and our lack of prior experience, Symbiont was awarded <b>Best in Programming</b> at the competition.</p>
-            <p>At this stage, our team consisted of three programmers, and this project laid the foundation for everything that followed. Symbiont marked the start of our growth as developers and set the direction for future projects focused on strong systems and unconventional design.</p>
+            <p>After pulling together a final build and scrapping a few mechanics I didn't mention here, we managed to present a workable demo and win <b>Best in Programming</b>.</p>
+            <p>Symbiont, while not a very fun game to play, was our first game as a team and it will hold a special place in my portfolio. It does what it set out to do, and I hope it broke a convention or two. The build at the top of this page on the Official Page mostly works, excuse the lack of tutorial and keybinds.</p>
         
             <button class="project-button secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Return to top of page</button>
         `
