@@ -215,7 +215,7 @@ const projectDetails = {
 
             <h2>Overview</h2>
             <img src="/images/general/OGPCLogo-small.webp" data-full-src="/images/general/OGPCLogo.png" alt="Oregon Game Project Challenge" class="blog-image small">
-            <p>Symbiont was our team <a href="/topic.html?id=fractal-dev" class="topic-link">Fractal Development</a>'s first game, and beyond some simple class projects, the first game that any of our members had made before. We made this game using <a href="https://unity.com/" target="_blank">Unity</a> for the <a href="/topic.html?id=ogpc" class="topic-link">Oregon Game Project Challenge (OGPC)</a>, a competition for making games against other Oregon high school teams.</p>
+            <p>Symbiont was our team <a href="/topic.html?id=fractal-dev" class="topic-link">Fractal Development</a>'s first game, and beyond some simple class projects, was the first game that any of our members had worked on. We made this game using <a href="https://unity.com/" target="_blank">Unity</a> for the <a href="/topic.html?id=ogpc" class="topic-link">Oregon Game Project Challenge (OGPC)</a>, a competition for making games against other Oregon high school teams.</p>
             <p>This year we started quite a bit late compared to the start date for the competition, leaving us with only three months to work instead of the designated nine. With this being our first project, a lot of our time was spent learning tools and building workflows instead of actual game development.</p>
             <p>All game jam competitions like this have a theme, and this year it was <i>Breaking Conventions</i>.</p>
 
