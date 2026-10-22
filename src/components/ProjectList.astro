@@ -1,0 +1,54 @@
+---
+import { smallVersion } from '../lib/images.mjs';
+import { dateRange, projectHref, type Project } from '../lib/projects';
+
+interface Props {
+    projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+<div class="projects-list">
+    {projects.map(project => {
+        const { title, summary, tags, poster, video, type } = project.data;
+        const href = projectHref(project);
+        const external = /^https?:\/\//.test(href ?? '');
+        const date = dateRange(project, ' - ');
+        const posterSrc = poster && smallVersion(poster);
+
+        return (
+            <a
+                class="project-item"
+                href={href}
+                data-type={type}
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noopener noreferrer' : undefined}
+            >
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>{title}</h3>
+                        {date && <p class="date">{date}</p>}
+                        <p>{summary}</p>
+                        {tags.length > 0 && (
+                            <div class="tech-tag">
+                                {tags.map((tag, i) => <>{i > 0 && ' '}<span class="tech-tag">{tag}</span></>)}
+                            </div>
+                        )}
+                    </div>
+                    {video ? (
+                        <div class="project-media">
+                            {/* The video source is added once it scrolls near the viewport */}
+                            <video class="project-video" autoplay loop muted playsinline poster={posterSrc} preload="none" data-src={video}></video>
+                        </div>
+                    ) : posterSrc && (
+                        <div class="project-media">
+                            <img class="project-poster" src={posterSrc} alt="" loading="lazy">
+                        </div>
+                    )}
+                </div>
+            </a>
+        );
+    })}
+</div>
+
+<script src="../scripts/project-list.js"></script>

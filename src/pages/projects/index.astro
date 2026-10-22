@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectList from '../../components/ProjectList.astro';
+import { getProjects, typeLabels } from '../../lib/projects';
+
+const projects = await getProjects();
+const types = Object.keys(typeLabels).filter(type => projects.some(project => project.data.type === type)) as (keyof typeof typeLabels)[];
+---
+<BaseLayout title="Projects - Elliot D'Alessandro" description="Everything Elliot D'Alessandro has made">
+    <main>
+        <div class="project-nav">
+            <a href="/" class="back-link">Home</a>
+        </div>
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-name">Projects</h1>
+                <p class="hero-intro">Everything I've made, newest first.</p>
+            </div>
+        </section>
+
+        {types.length > 1 && (
+            <div class="filter-chips">
+                <button type="button" class="filter-chip" data-type="all" aria-pressed="true">All</button>
+                {types.map(type => (
+                    <button type="button" class="filter-chip" data-type={type} aria-pressed="false">{typeLabels[type]}</button>
+                ))}
+            </div>
+        )}
+
+        <section class="projects-section">
+            <ProjectList projects={projects} />
+        </section>
+    </main>
+</BaseLayout>
+
+<script>
+    const chips = document.querySelectorAll<HTMLButtonElement>('.filter-chip');
+
+    chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            const type = chip.dataset.type;
+            chips.forEach(other => other.setAttribute('aria-pressed', String(other === chip)));
+            document.querySelectorAll<HTMLElement>('.project-item').forEach(item => {
+                item.hidden = type !== 'all' && item.dataset.type !== type;
+            });
+        });
+    });
+</script>

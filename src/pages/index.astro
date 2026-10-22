@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectList from '../components/ProjectList.astro';
+import { getProjects } from '../lib/projects';
+
+const featured = (await getProjects()).filter(project => project.data.featured);
+---
+<BaseLayout title="Elliot D'Alessandro">
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-name">Elliot D'Alessandro</h1>
+                <p class="hero-intro">I'm studying Data Science and Physics at UC Berkeley, and I make video games in my free time.</p>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <ProjectList projects={featured} />
+            <div class="projects-more">
+                <a href="/projects/" class="back-link">All projects →</a>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Contacts</h2>
+            <div class="contact-links">
+                <a href="https://elliotd.net/documents/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href="https://github.com/2Elliot" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://2elliot.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
+                <a href="https://www.linkedin.com/in/elliot-d-alessandro-520aa02a8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:contact@elliotd.net">Email</a>
+            </div>
+        </section>
+    </main>
+</BaseLayout>

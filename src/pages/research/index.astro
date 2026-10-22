@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectList from '../../components/ProjectList.astro';
+import { getProjects } from '../../lib/projects';
+
+const research = (await getProjects()).filter(project => project.data.type === 'research');
+---
+<BaseLayout title="Research - Elliot D'Alessandro" description="Writing and research projects">
+    <main>
+        <div class="project-nav">
+            <a href="/" class="back-link">Home</a>
+        </div>
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-name">Research</h1>
+                <p class="hero-intro">Writing and research projects.</p>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            {research.length > 0
+                ? <ProjectList projects={research} />
+                : <p style="text-align: center; color: var(--text-subtle);">Nothing here yet — check back soon.</p>}
+        </section>
+    </main>
+</BaseLayout>

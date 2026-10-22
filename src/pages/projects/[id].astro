@@ -1,0 +1,94 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageModal from '../../components/ImageModal.astro';
+import { smallVersion } from '../../lib/images.mjs';
+import { dateRange, getProjects, hasPage, type Project } from '../../lib/projects';
+
+export async function getStaticPaths() {
+    // Hidden projects get a page, but aren't part of the prev/next navigation
+    const listed = (await getProjects()).filter(hasPage);
+    const withPages = await getCollection('projects', hasPage);
+
+    return withPages.map(project => {
+        const index = listed.findIndex(p => p.id === project.id);
+        return {
+            params: { id: project.id },
+            props: {
+                project,
+                prev: index > 0 ? listed[index - 1] : undefined,
+                next: index >= 0 ? listed[index + 1] : undefined,
+            },
+        };
+    });
+}
+
+interface Props {
+    project: Project;
+    prev?: Project;
+    next?: Project;
+}
+
+const { project, prev, next } = Astro.props;
+const { title, summary, tags, poster, video, trailer, links } = project.data;
+const { Content } = await render(project);
+const date = dateRange(project, ' – ');
+const posterSrc = poster && smallVersion(poster);
+---
+<BaseLayout title={`${title} - Elliot D'Alessandro`} description={summary} image={poster}>
+    <main>
+        <div class="project-nav">
+            <a href="/" class="back-link">Home</a>
+            <div class="project-nav-arrows">
+                {prev ? <a href={`/projects/${prev.id}/`} class="nav-arrow">← {prev.data.title}</a> : <span></span>}
+                {next && <a href={`/projects/${next.id}/`} class="nav-arrow">{next.data.title} →</a>}
+            </div>
+        </div>
+        <div class="project-detail">
+            <div class="project-header">
+                <h1>{title}</h1>
+            </div>
+
+            <div class="project-blog-content">
+                {video ? (
+                    trailer ? (
+                        <a class="project-trailer" href={trailer} target="_blank" rel="noopener" aria-label={`Watch ${title} trailer`}>
+                            <video class="project-trailer-video" autoplay loop muted playsinline poster={posterSrc} preload="auto">
+                                <source src={video} type="video/mp4">
+                            </video>
+                        </a>
+                    ) : (
+                        <div class="project-trailer">
+                            <video class="project-trailer-video" autoplay loop muted playsinline poster={posterSrc} preload="auto">
+                                <source src={video} type="video/mp4">
+                            </video>
+                        </div>
+                    )
+                ) : poster && (
+                    <img src={posterSrc} data-full-src={poster} alt={`${title} poster`} class="blog-image">
+                )}
+
+                {(date || tags.length > 0) && (
+                    <div class="project-meta">
+                        {date && <span class="project-date">{date}</span>}
+                        {tags.length > 0 && <div class="tech-tags">{tags.map(tag => <span class="tech-tag">{tag}</span>)}</div>}
+                    </div>
+                )}
+
+                {links.length > 0 && (
+                    <p>
+                        {links.map((link, i) => (
+                            <>{i > 0 && ' '}<a href={link.url} target="_blank" class={i === 0 ? 'project-button' : 'project-button secondary'}>{link.label}</a></>
+                        ))}
+                    </p>
+                )}
+
+                <Content />
+
+                <button class="project-button secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Return to top of page</button>
+            </div>
+        </div>
+    </main>
+
+    <ImageModal />
+</BaseLayout>

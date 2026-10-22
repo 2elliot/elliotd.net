@@ -1,0 +1,43 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageModal from '../../components/ImageModal.astro';
+
+export async function getStaticPaths() {
+    const topics = await getCollection('topics');
+    return topics.map(topic => ({ params: { id: topic.id }, props: { topic } }));
+}
+
+interface Props {
+    topic: CollectionEntry<'topics'>;
+}
+
+const { topic } = Astro.props;
+const { title, links } = topic.data;
+const { Content } = await render(topic);
+---
+<BaseLayout title={`${title} - Elliot D'Alessandro`}>
+    <main>
+        <div class="project-nav">
+            <a href="/" class="back-link">Home</a>
+        </div>
+        <div class="project-detail">
+            <div class="project-header">
+                <h1>{title}</h1>
+            </div>
+            <div class="project-blog-content">
+                <Content />
+
+                {links.length > 0 && (
+                    <p>
+                        {links.map((link, i) => (
+                            <>{i > 0 && ' '}<a href={link.url} target="_blank" class="project-button secondary">{link.label}</a></>
+                        ))}
+                    </p>
+                )}
+            </div>
+        </div>
+    </main>
+
+    <ImageModal />
+</BaseLayout>

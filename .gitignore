@@ -3,6 +3,7 @@ node_modules/
 
 # Production build
 dist/
+.astro/
 
 # Local env files
 .env
@@ -21,8 +22,3 @@ Thumbs.db
 
 # VSCode settings
 .vscode/
-
-# Optional: lockfiles (if you don’t want to commit them)
-package-lock.json
-# yarn.lock
-# pnpm-lock.yaml

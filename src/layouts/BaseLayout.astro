@@ -1,0 +1,58 @@
+---
+import '../styles/styles.css';
+import '../styles/project-styles.css';
+
+interface Props {
+    title: string;
+    description?: string;
+    // Path to an image in public/, used for link previews
+    image?: string;
+}
+
+const {
+    title,
+    description = "Personal site of Elliot D'Alessandro",
+    image = '/images/og-preview.jpg',
+} = Astro.props;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const imageUrl = new URL(image, Astro.site).href;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-1LPHRPDBYF"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1LPHRPDBYF');
+    </script>
+
+    <script is:inline>var t;try{t=localStorage.getItem('theme')}catch(e){}document.documentElement.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));</script>
+
+    <!-- Open Graph / Social Media Preview Tags -->
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content={imageUrl}>
+    <meta property="og:url" content={url}>
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={imageUrl}>
+
+    <link rel="canonical" href={url}>
+</head>
+<body>
+    <slot />
+
+    <script src="../scripts/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elliot D'Alessandro</title>
+    <script>
+        // Old links looked like /project.html?id=nocte; pages now live at /projects/nocte/
+        var id = new URLSearchParams(location.search).get('id');
+        location.replace(id ? '/projects/' + encodeURIComponent(id) + '/' : '/');
+    </script>
+</head>
+<body>
+    <p>Redirecting to <a href="/">elliotd.net</a>...</p>
+</body>
+</html>
