@@ -14,7 +14,7 @@
       gtag('config', 'G-1LPHRPDBYF');
     </script>
 
-    <script>document.documentElement.setAttribute('data-theme',window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');</script>
+    <script>var t;try{t=localStorage.getItem('theme')}catch(e){}document.documentElement.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));</script>
 
     <!-- Open Graph / Social Media Preview Tags -->
     <meta property="og:title" content="Side Projects - Elliot D'Alessandro">
@@ -29,7 +29,7 @@
     <meta name="twitter:description" content="Smaller things I've built">
     <meta name="twitter:image" content="https://elliotd.net/images/og-preview.jpg">
 
-    <link rel="stylesheet" href="../styles.css?v=3">
+    <link rel="stylesheet" href="../styles.css?v=4">
     <link rel="stylesheet" href="../project-styles.css?v=3">
 </head>
 <body>
@@ -58,5 +58,6 @@
             </div>
         </section>
     </main>
+    <script src="/theme.js?v=4"></script>
 </body>
 </html>

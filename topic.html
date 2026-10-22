@@ -14,8 +14,8 @@
       gtag('config', 'G-1LPHRPDBYF');
     </script>
 
-    <script>document.documentElement.setAttribute('data-theme',window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');</script>
-    <link rel="stylesheet" href="styles.css?v=3">
+    <script>var t;try{t=localStorage.getItem('theme')}catch(e){}document.documentElement.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));</script>
+    <link rel="stylesheet" href="styles.css?v=4">
     <link rel="stylesheet" href="project-styles.css?v=3">
 </head>
 <body>
@@ -32,5 +32,6 @@
 
     <script src="topic-details.js?v=3"></script>
     <script src="topic-page.js?v=3"></script>
+    <script src="/theme.js?v=4"></script>
 </body>
 </html>

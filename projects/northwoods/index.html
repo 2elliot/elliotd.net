@@ -14,7 +14,7 @@
       gtag('config', 'G-1LPHRPDBYF');
     </script>
 
-    <script>document.documentElement.setAttribute('data-theme',window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');</script>
+    <script>var t;try{t=localStorage.getItem('theme')}catch(e){}document.documentElement.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));</script>
 
     <!-- Open Graph / Social Media Preview Tags -->
     <meta property="og:title" content="Northwoods - Elliot D'Alessandro">
@@ -31,7 +31,7 @@
 
     <link rel="canonical" href="https://elliotd.net/projects/northwoods/">
 
-    <link rel="stylesheet" href="/styles.css?v=3">
+    <link rel="stylesheet" href="/styles.css?v=4">
     <link rel="stylesheet" href="/project-styles.css?v=3">
 </head>
 <body>
@@ -58,5 +58,6 @@
     <script src="/projects.js?v=3"></script>
     <script src="/project-details.js?v=3"></script>
     <script src="/project-page.js?v=3"></script>
+    <script src="/theme.js?v=4"></script>
 </body>
 </html>
